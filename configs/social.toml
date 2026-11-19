@@ -1,0 +1,39 @@
+# Phase 2 social-metric settings. First version; weights are tuned on the validation split later.
+
+[windows]
+window_s = 10.0            # length of each timeline window
+follow_s = 2.0             # gaze following: another person looks at the same target within this time
+
+[gaze_weights]             # how much each gaze target counts toward engagement (0-1)
+person = 1.0
+screen = 1.0
+whiteboard = 1.0
+table = 0.5                # notes / laptop: partly engaged
+away = 0.0
+unknown = 0.25             # no face found: usually turned away, sometimes just occluded
+
+[body]
+turned_out_deg = 45.0      # torso this far from the person's own usual direction = turned out of the group
+facing_cone_deg = 45.0     # torso within this angle of another seat = facing them (uses seat_layouts.toml)
+body_weight = 0.3          # engagement = (1 - body_weight) * gaze + body_weight * body
+
+[disengagement]
+smooth_s = 5.0             # rolling mean before thresholding
+below = 0.4                # engagement under this ...
+min_s = 30.0               # ... for at least this long = a disengaged spell (test T2.3)
+
+[dominance]
+# Gaze only until the room layout is calibrated. On ES2008a (16 Nov 2026), "facing received"
+# computed from the first-guess seat layout ranked speakers in reverse (rank corr -0.80) and
+# turned a perfect gaze-only ranking (+1.00) into a miss. One meeting: revisit with more data.
+attention = 1.0            # share of others' gaze received
+facing = 0.0               # share of others' torsos facing this person (needs a calibrated layout)
+
+[rapport]
+mutual_scale = 0.2         # mutual-gaze rate that counts as "full" (rates above are capped at 1)
+use_facing = false         # include pairwise facing (layout-based) in rapport; off for the same reason
+
+[addressee]
+rule = "reengage"          # "reengage": address the least engaged person if below threshold, else the dominant one
+                           # "dominant": always address the most dominant person
+reengage_below = 0.4
