@@ -1,0 +1,19 @@
+# Top-down room layouts (metres). FIRST ESTIMATES from the AMI room descriptions:
+# calibrate seat positions, camera directions and the seat <-> close-up mapping on real frames
+# before trusting gaze targets (Phase 1 hand-label step).
+#
+# Axes: x along the table's long side, y across it. Screen at the x = 0 end.
+# camera_dir = top-down direction each close-up camera looks (degrees, counter-clockwise from +x).
+# A close-up for a seat sits across the table, so it looks back toward that seat.
+
+[edinburgh]
+seats = { P1 = [0.9, 0.0], P2 = [1.8, 0.0], P3 = [0.9, 1.2], P4 = [1.8, 1.2] }
+objects = { screen = [-0.4, 0.6], whiteboard = [2.8, 0.6] }
+camera_of = { P1 = "Closeup1", P2 = "Closeup2", P3 = "Closeup3", P4 = "Closeup4" }
+camera_dir = { Closeup1 = -90.0, Closeup2 = -90.0, Closeup3 = 90.0, Closeup4 = 90.0 }
+
+[idiap]
+seats = { P1 = [0.9, 0.0], P2 = [1.8, 0.0], P3 = [0.9, 1.2], P4 = [1.8, 1.2] }
+objects = { screen = [-0.4, 0.6], whiteboard = [2.8, 0.6] }
+camera_of = { P1 = "Closeup1", P2 = "Closeup2", P3 = "Closeup3", P4 = "Closeup4" }
+camera_dir = { Closeup1 = -90.0, Closeup2 = -90.0, Closeup3 = 90.0, Closeup4 = 90.0 }

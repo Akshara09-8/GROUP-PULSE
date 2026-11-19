@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nite:root xmlns:nite="http://nite.sourceforge.net/" nite:id="TS9999a_A.root">
+    <foa starttime="0.0" endtime="4.0" type="place" place="table" nite:id="a1"/>
+    <foa starttime="4.0" endtime="9.0" type="person" role="UI" nxt_agent="B" nite:id="a2"/>
+    <foa starttime="9.0" endtime="12.0" type="place" place="slide-screen" nite:id="a3"/>
+    <foa starttime="12.0" endtime="13.0" type="unspecified" nite:id="a4"/>
+</nite:root>
