@@ -1,0 +1,10 @@
+services:
+  pipeline:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ../data:/app/data
+      - ../pipeline:/app/pipeline
+      - ../tests:/app/tests
+      - ../configs:/app/configs

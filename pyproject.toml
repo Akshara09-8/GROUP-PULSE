@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grouppulse"
+version = "0.0.1"
+description = "Group dynamics (dominance, engagement, rapport) from gaze and body orientation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []  # Phase 0 data tools use the standard library only
+
+[project.optional-dependencies]
+video = ["opencv-python-headless>=4.8", "numpy>=1.26"]
+perception = ["opencv-python-headless>=4.8", "numpy>=1.26", "pyarrow>=15", "mediapipe>=0.10.14"]
+pose = ["ultralytics>=8.3"]  # pulls in PyTorch (CPU build is fine)
+api = ["fastapi>=0.110", "uvicorn>=0.29", "sqlalchemy>=2.0", "python-multipart>=0.0.9", "httpx>=0.27"]
+supabase = ["psycopg[binary]>=3.1"]  # Postgres driver for GP_DATABASE_URL=postgresql+psycopg://...
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["pipeline"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["network: needs internet access (skipped unless GP_NETWORK=1)"]

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nite:root nite:id="meetings" xmlns:nite="http://nite.sourceforge.net/">
+  <meeting observation="TS9999a" type="scenario">
+    <speaker nxt_agent="A" global_name="FEE001" role="PM" camera="Closeup1"/>
+    <speaker nxt_agent="B" global_name="MEE002" role="UI" camera="Closeup2"/>
+  </meeting>
+  <meeting observation="TS9999b" type="scenario">
+    <speaker nxt_agent="A" global_name="FEE001" role="PM" camera="Closeup1"/>
+  </meeting>
+</nite:root>

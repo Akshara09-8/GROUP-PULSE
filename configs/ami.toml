@@ -1,0 +1,42 @@
+# AMI Meeting Corpus sources and meeting lists used by Group Pulse.
+# URLs checked 2026-11-12 (HTTP 200).
+
+[source]
+annotations_url = "https://groups.inf.ed.ac.uk/ami/AMICorpusAnnotations/ami_public_manual_1.6.2.zip"
+video_url = "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror/amicorpus/{meeting}/video/{meeting}.{view}.avi"
+
+[video]
+fps = 25.0
+# Close-ups show one face each (best for head pose and gaze); room views show everyone (best for body orientation).
+# "room" in a view list expands to the room cameras of that meeting's site (checked by HTTP HEAD 2026-11-12:
+# ES2002a has Corner and Overhead; IS1009a has L, C and R but no Corner).
+views = ["Closeup1", "Closeup2", "Closeup3", "Closeup4", "room"]
+
+[video.room_views]
+ES = ["Corner"]
+IS = ["C"]
+TS = ["Corner"]
+
+[meetings]
+# Five meetings for Phase 0 checks and the public demo.
+demo = ["ES2002a", "ES2002b", "ES2003a", "IS1009a", "IS1009b"]
+# A larger set for training and evaluation (Phase 1-5).
+dev = [
+  "ES2002a", "ES2002b", "ES2002c", "ES2002d",
+  "ES2003a", "ES2003b", "ES2003c", "ES2003d",
+  "ES2004a", "ES2004b", "ES2004c", "ES2004d",
+  "ES2005a", "ES2005b", "ES2005c", "ES2005d",
+  "IS1009a", "IS1009b", "IS1009c", "IS1009d",
+]
+
+# The 14 meetings with AMI focus-of-attention labels (who/what each person looks at):
+# ground truth for gaze-target accuracy (T1.5) without hand labelling.
+focus = [
+  "ES2008a", "IS1000a", "IS1001a", "IS1001b", "IS1001c", "IS1003b", "IS1003d",
+  "IS1006b", "IS1006d", "IS1008a", "IS1008b", "IS1008c", "IS1008d", "TS3005a",
+]
+
+[splits]
+seed = 13
+val_fraction = 0.2
+test_fraction = 0.2

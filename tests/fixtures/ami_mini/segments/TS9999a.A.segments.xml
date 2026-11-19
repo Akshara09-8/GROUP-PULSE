@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Tiny hand-made sample in AMI NXT format, for tests only. -->
+<nite:root nite:id="TS9999a.A.segments" xmlns:nite="http://nite.sourceforge.net/">
+  <segment nite:id="TS9999a.segs.A.1" transcriber_start="0.52" transcriber_end="4.13" participant="FEE001"/>
+  <segment nite:id="TS9999a.segs.A.2" transcriber_start="3.90" transcriber_end="6.00" participant="FEE001"/>
+  <segment nite:id="TS9999a.segs.A.3" transcriber_start="20.00" transcriber_end="25.517" participant="FEE001"/>
+  <segment nite:id="TS9999a.segs.A.bad" transcriber_start="30.0" participant="FEE001"/>
+</nite:root>
