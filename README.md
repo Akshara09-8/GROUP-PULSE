@@ -12,7 +12,7 @@ Planning doc: phases, test cases, tech stack and database options live in the *G
 | 1 | Perception pipeline (tracking, head pose, gaze, torso) | Code complete; T1.4 and T1.5 below target (see verdict) |
 | 2 | Social metrics (dominance, engagement, rapport) | Metrics + T2.1–T2.8 done; dominance being re-scored with the Idiap-trained gaze model |
 | 3 | Backend and storage (FastAPI, SQLite/Supabase) | API, worker, retention, AMI import done; T3.1–T3.7 pass on SQLite. Uploads await a single-camera reader; Supabase untested |
-| 4 | Frontend UI (React) | Not started |
+| 4 | Frontend UI (React) | Four pages, four colour schemes, 15 tests; runs against the real API. Video overlay (T4.2) waits on uploads |
 | 5 | Evaluation | Not started |
 | 6 | Deploy and launch | Not started |
 

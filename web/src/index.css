@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-bg text-ink font-sans antialiased; }
+  h1, h2, h3 { @apply font-display; text-wrap: balance; }
+  :focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 2px; }
+}
+
+@layer components {
+  .card { @apply bg-surface border border-line rounded-lg p-4 min-w-0; }
+  .label { @apply text-[11px] uppercase tracking-[0.08em] font-semibold text-muted; }
+  .btn { @apply inline-flex items-center gap-2 rounded-md bg-accent text-accent-ink px-4 py-2 text-sm font-semibold disabled:opacity-50; }
+  .btn-ghost { @apply inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold text-accent ring-1 ring-inset ring-accent; }
+  .pill { @apply inline-block rounded-full px-2 py-0.5 text-[11px] font-semibold; }
+  .num { @apply font-display font-semibold tabular-nums; }
+}
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
