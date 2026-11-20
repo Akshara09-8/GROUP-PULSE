@@ -13,7 +13,7 @@ Planning doc: phases, test cases, tech stack and database options live in the *G
 | 2 | Social metrics (dominance, engagement, rapport) | Metrics + T2.1–T2.8 done; dominance being re-scored with the Idiap-trained gaze model |
 | 3 | Backend and storage (FastAPI, SQLite/Supabase) | API, worker, retention, AMI import done; T3.1–T3.7 pass on SQLite. Uploads await a single-camera reader; Supabase untested |
 | 4 | Frontend UI (React) | Four pages, four colour schemes, 15 tests; runs against the real API. Video overlay (T4.2) waits on uploads |
-| 5 | Evaluation | Not started |
+| 5 | Evaluation | Done: reproducible report in `reports/`. T5.3–T5.5 pass; T1.5, T5.1, T5.2 fail (see below) |
 | 6 | Deploy and launch | Not started |
 
 ## Layout
@@ -148,6 +148,31 @@ Settings are in `configs/social.toml`. Dominance is currently **gaze only** (sha
 | same | predicted, each person's pose re-centred | 1 / 3 | +0.07 mean |
 
 The metric itself works (true gaze → perfect ranking), but the gaze-target model fitted on one meeting's four people does not carry over to other people: on unseen meetings it predicts "P2" far too often. Fix: train the gaze model on many groups (the 11 labelled Idiap meetings). Caveat: in all four Edinburgh meetings the most talkative person sits at seat P4 (the project manager's seat), so seat alone would score 3/3; future evaluation needs meetings where the leader's seat varies.
+
+## Evaluation (Phase 5)
+
+```bash
+python -m grouppulse.evaluation --data path/to/ami-data --idiap-tracks path/to/ami-data/tracks_idiap \
+    --edinburgh-tracks path/to/ami-data/tracks_full --out reports --repro
+```
+
+One command runs every experiment and writes [`reports/phase5_report.md`](reports/phase5_report.md) and `reports/phase5_results.json`. Intervals are bootstrap 95% over meetings (2000 resamples, seed 13); two runs give byte-identical output. Results of 20 Nov 2026, 11 labelled Idiap meetings (IS1008c's video could not be downloaded) plus the Edinburgh set:
+
+| Test | Result | Verdict |
+| --- | --- | --- |
+| T1.5 gaze target ≥ 70% | 59.5% [54.0, 65.4] held out by meeting series; baseline 28.7% | Fail |
+| T5.1 dominance vs seat baseline | Idiap ρ +0.18 vs +0.44; Edinburgh −0.20 vs +0.35 | Fail |
+| T5.2 disengagement F1 ≥ 0.6 | 11.1% [3.9, 18.1] against a gaze-label proxy | Fail |
+| T5.3 ablation gaze / orientation / both | Table produced (Edinburgh) | Pass |
+| T5.4 reproducible | Byte-identical JSON across two runs | Pass |
+| T5.5 confidence intervals | Reported for every mean | Pass |
+
+What the numbers say:
+
+- **The hypothesis holds on true gaze.** With AMI's labelled gaze, attention received ranks speakers at ρ +0.60 [+0.31, +0.85] on Idiap and +1.00 on ES2008a.
+- **Engagement over time is tracked.** Window engagement from predicted gaze correlates +0.62 [+0.53, +0.69] with the true-gaze version, even though rare 30 s spells are mostly missed.
+- **The gaze reader is the bottleneck.** About 60% gaze accuracy is not enough to rank people: the model over-predicts "P2" as the target (most looked-at in 7 of 11 Idiap meetings and all 3 unseen Edinburgh meetings). That systematic bias is the first thing to fix.
+- **Seating predicts talking.** The project manager tends to take the same seat, so a seat baseline is strong (Idiap top-1 73%). Any future claim has to beat it.
 
 ## Data credit and licence
 

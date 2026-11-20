@@ -1,0 +1,1118 @@
+{
+  "E1_gaze_edinburgh": {
+    "mean_accuracy": 0.6036,
+    "per_split": [
+      {
+        "accuracy": 0.6811,
+        "meeting": "ES2008a",
+        "split": "first half -> second half"
+      },
+      {
+        "accuracy": 0.5261,
+        "meeting": "ES2008a",
+        "split": "second half -> first half"
+      }
+    ]
+  },
+  "E1_gaze_idiap": {
+    "mean_accuracy": {
+      "ci95": [
+        0.54,
+        0.6538
+      ],
+      "n": 11,
+      "value": 0.5953
+    },
+    "mean_majority_baseline": {
+      "ci95": [
+        0.2345,
+        0.344
+      ],
+      "n": 11,
+      "value": 0.2875
+    },
+    "per_meeting": [
+      {
+        "accuracy": 0.4186,
+        "labelled_frames": 14937,
+        "majority_baseline": 0.1423,
+        "meeting": "IS1000a",
+        "train_frames": 162836
+      },
+      {
+        "accuracy": 0.5707,
+        "labelled_frames": 8900,
+        "majority_baseline": 0.2692,
+        "meeting": "IS1001a",
+        "train_frames": 133501
+      },
+      {
+        "accuracy": 0.5666,
+        "labelled_frames": 21067,
+        "majority_baseline": 0.3708,
+        "meeting": "IS1001b",
+        "train_frames": 133501
+      },
+      {
+        "accuracy": 0.7269,
+        "labelled_frames": 14305,
+        "majority_baseline": 0.363,
+        "meeting": "IS1001c",
+        "train_frames": 133501
+      },
+      {
+        "accuracy": 0.7673,
+        "labelled_frames": 16347,
+        "majority_baseline": 0.3575,
+        "meeting": "IS1003b",
+        "train_frames": 140511
+      },
+      {
+        "accuracy": 0.5973,
+        "labelled_frames": 20915,
+        "majority_baseline": 0.4886,
+        "meeting": "IS1003d",
+        "train_frames": 140511
+      },
+      {
+        "accuracy": 0.4963,
+        "labelled_frames": 21469,
+        "majority_baseline": 0.22,
+        "meeting": "IS1006b",
+        "train_frames": 138032
+      },
+      {
+        "accuracy": 0.5073,
+        "labelled_frames": 18272,
+        "majority_baseline": 0.2271,
+        "meeting": "IS1006d",
+        "train_frames": 138032
+      },
+      {
+        "accuracy": 0.6452,
+        "labelled_frames": 9288,
+        "majority_baseline": 0.2901,
+        "meeting": "IS1008a",
+        "train_frames": 136212
+      },
+      {
+        "accuracy": 0.6588,
+        "labelled_frames": 17603,
+        "majority_baseline": 0.2387,
+        "meeting": "IS1008b",
+        "train_frames": 136212
+      },
+      {
+        "accuracy": 0.5939,
+        "labelled_frames": 14670,
+        "majority_baseline": 0.1948,
+        "meeting": "IS1008d",
+        "train_frames": 136212
+      }
+    ],
+    "series": [
+      "IS1000",
+      "IS1001",
+      "IS1003",
+      "IS1006",
+      "IS1008"
+    ]
+  },
+  "E2_dominance_edinburgh": {
+    "per_meeting": [
+      {
+        "gaze_pred": {
+          "order": [
+            "P2",
+            "P3",
+            "P4",
+            "P1"
+          ],
+          "rho": -0.4,
+          "top1": false
+        },
+        "meeting": "ES2002a",
+        "seat_baseline": {
+          "order": [
+            "P4",
+            "P1",
+            "P2",
+            "P3"
+          ],
+          "rho": 0.4,
+          "top1": true
+        },
+        "truth": [
+          "P4",
+          "P3",
+          "P1",
+          "P2"
+        ]
+      },
+      {
+        "gaze_pred": {
+          "order": [
+            "P2",
+            "P4",
+            "P3",
+            "P1"
+          ],
+          "rho": -0.2,
+          "top1": false
+        },
+        "meeting": "ES2002b",
+        "seat_baseline": {
+          "order": [
+            "P4",
+            "P1",
+            "P2",
+            "P3"
+          ],
+          "rho": 0.4,
+          "top1": true
+        },
+        "truth": [
+          "P4",
+          "P3",
+          "P1",
+          "P2"
+        ]
+      },
+      {
+        "gaze_pred": {
+          "order": [
+            "P2",
+            "P4",
+            "P3",
+            "P1"
+          ],
+          "rho": 0.0,
+          "top1": false
+        },
+        "meeting": "ES2003a",
+        "seat_baseline": {
+          "order": [
+            "P4",
+            "P3",
+            "P1",
+            "P2"
+          ],
+          "rho": 0.4,
+          "top1": true
+        },
+        "truth": [
+          "P4",
+          "P1",
+          "P2",
+          "P3"
+        ]
+      },
+      {
+        "gaze_true": {
+          "order": [
+            "P4",
+            "P2",
+            "P3",
+            "P1"
+          ],
+          "rho": 1.0,
+          "top1": true
+        },
+        "meeting": "ES2008a",
+        "seat_baseline": {
+          "order": [
+            "P4",
+            "P1",
+            "P3",
+            "P2"
+          ],
+          "rho": 0.2,
+          "top1": true
+        },
+        "truth": [
+          "P4",
+          "P2",
+          "P3",
+          "P1"
+        ]
+      }
+    ],
+    "summary": {
+      "gaze_pred": {
+        "mean_rank_corr": {
+          "ci95": [
+            -0.4,
+            0.0
+          ],
+          "n": 3,
+          "value": -0.2
+        },
+        "top1": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n": 3,
+          "value": 0.0
+        }
+      },
+      "gaze_true": {
+        "mean_rank_corr": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n": 1,
+          "value": 1.0
+        },
+        "top1": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n": 1,
+          "value": 1.0
+        }
+      },
+      "random": {
+        "mean_rank_corr": 0.0,
+        "top1": 0.25
+      },
+      "seat_baseline": {
+        "mean_rank_corr": {
+          "ci95": [
+            0.25,
+            0.4
+          ],
+          "n": 4,
+          "value": 0.35
+        },
+        "top1": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n": 4,
+          "value": 1.0
+        }
+      }
+    }
+  },
+  "E2_dominance_idiap": {
+    "per_meeting": [
+      {
+        "gaze_pred": {
+          "order": [
+            "P2",
+            "P3",
+            "P4",
+            "P1"
+          ],
+          "rho": 1.0,
+          "top1": true
+        },
+        "gaze_true": {
+          "order": [
+            "P2",
+            "P3",
+            "P4",
+            "P1"
+          ],
+          "rho": 1.0,
+          "top1": true
+        },
+        "meeting": "IS1000a",
+        "seat_baseline": {
+          "order": [
+            "P1",
+            "P3",
+            "P2",
+            "P4"
+          ],
+          "rho": -0.4,
+          "top1": false
+        },
+        "truth": [
+          "P2",
+          "P3",
+          "P4",
+          "P1"
+        ]
+      },
+      {
+        "gaze_pred": {
+          "order": [
+            "P2",
+            "P1",
+            "P3",
+            "P4"
+          ],
+          "rho": 0.8,
+          "top1": false
+        },
+        "gaze_true": {
+          "order": [
+            "P2",
+            "P1",
+            "P3",
+            "P4"
+          ],
+          "rho": 0.8,
+          "top1": false
+        },
+        "meeting": "IS1001a",
+        "seat_baseline": {
+          "order": [
+            "P1",
+            "P3",
+            "P2",
+            "P4"
+          ],
+          "rho": 0.8,
+          "top1": true
+        },
+        "truth": [
+          "P1",
+          "P2",
+          "P3",
+          "P4"
+        ]
+      },
+      {
+        "gaze_pred": {
+          "order": [
+            "P3",
+            "P2",
+            "P1",
+            "P4"
+          ],
+          "rho": -0.4,
+          "top1": false
+        },
+        "gaze_true": {
+          "order": [
+            "P1",
+            "P2",
+            "P3",
+            "P4"
+          ],
+          "rho": 0.8,
+          "top1": true
+        },
+        "meeting": "IS1001b",
+        "seat_baseline": {
+          "order": [
+            "P1",
+            "P3",
+            "P2",
+            "P4"
+          ],
+          "rho": 0.4,
+          "top1": true
+        },
+        "truth": [
+          "P1",
+          "P2",
+          "P4",
+          "P3"
+        ]
+      },
+      {
+        "gaze_pred": {
+          "order": [
+            "P3",
+            "P2",
+            "P1",
+            "P4"
+          ],
+          "rho": 0.4,
+          "top1": false
+        },
+        "gaze_true": {
+          "order": [
+            "P3",
+            "P1",
+            "P2",
+            "P4"
+          ],
+          "rho": 0.8,
+          "top1": false
+        },
+        "meeting": "IS1001c",
+        "seat_baseline": {
+          "order": [
+            "P1",
+            "P3",
+            "P2",
+            "P4"
+          ],
+          "rho": 1.0,
+          "top1": true
+        },
+        "truth": [
+          "P1",
+          "P3",
+          "P2",
+          "P4"
+        ]
+      },
+      {
+        "gaze_pred": {
+          "order": [
+            "P2",
+            "P1",
+            "P3",
+            "P4"
+          ],
+          "rho": -0.2,
+          "top1": false
+        },
+        "gaze_true": {
+          "order": [
+            "P2",
+            "P1",
+            "P3",
+            "P4"
+          ],
+          "rho": -0.2,
+          "top1": false
+        },
+        "meeting": "IS1003b",
+        "seat_baseline": {
+          "order": [
+            "P1",
+            "P3",
+            "P2",
+            "P4"
+          ],
+          "rho": 0.8,
+          "top1": true
+        },
+        "truth": [
+          "P1",
+          "P3",
+          "P4",
+          "P2"
+        ]
+      },
+      {
+        "gaze_pred": {
+          "order": [
+            "P3",
+            "P2",
+            "P1",
+            "P4"
+          ],
+          "rho": 0.2,
+          "top1": false
+        },
+        "gaze_true": {
+          "order": [
+            "P1",
+            "P2",
+            "P3",
+            "P4"
+          ],
+          "rho": 1.0,
+          "top1": true
+        },
+        "meeting": "IS1003d",
+        "seat_baseline": {
+          "order": [
+            "P1",
+            "P3",
+            "P2",
+            "P4"
+          ],
+          "rho": 0.8,
+          "top1": true
+        },
+        "truth": [
+          "P1",
+          "P2",
+          "P3",
+          "P4"
+        ]
+      },
+      {
+        "gaze_pred": {
+          "order": [
+            "P2",
+            "P4",
+            "P1",
+            "P3"
+          ],
+          "rho": 0.0,
+          "top1": false
+        },
+        "gaze_true": {
+          "order": [
+            "P4",
+            "P2",
+            "P3",
+            "P1"
+          ],
+          "rho": 0.8,
+          "top1": true
+        },
+        "meeting": "IS1006b",
+        "seat_baseline": {
+          "order": [
+            "P1",
+            "P3",
+            "P2",
+            "P4"
+          ],
+          "rho": -0.8,
+          "top1": false
+        },
+        "truth": [
+          "P4",
+          "P3",
+          "P2",
+          "P1"
+        ]
+      },
+      {
+        "gaze_pred": {
+          "order": [
+            "P2",
+            "P1",
+            "P4",
+            "P3"
+          ],
+          "rho": -0.4,
+          "top1": false
+        },
+        "gaze_true": {
+          "order": [
+            "P4",
+            "P2",
+            "P1",
+            "P3"
+          ],
+          "rho": 0.4,
+          "top1": true
+        },
+        "meeting": "IS1006d",
+        "seat_baseline": {
+          "order": [
+            "P1",
+            "P3",
+            "P2",
+            "P4"
+          ],
+          "rho": -0.2,
+          "top1": false
+        },
+        "truth": [
+          "P4",
+          "P1",
+          "P3",
+          "P2"
+        ]
+      },
+      {
+        "gaze_pred": {
+          "order": [
+            "P1",
+            "P3",
+            "P4",
+            "P2"
+          ],
+          "rho": 1.0,
+          "top1": true
+        },
+        "gaze_true": {
+          "order": [
+            "P1",
+            "P3",
+            "P4",
+            "P2"
+          ],
+          "rho": 1.0,
+          "top1": true
+        },
+        "meeting": "IS1008a",
+        "seat_baseline": {
+          "order": [
+            "P1",
+            "P3",
+            "P2",
+            "P4"
+          ],
+          "rho": 0.8,
+          "top1": true
+        },
+        "truth": [
+          "P1",
+          "P3",
+          "P4",
+          "P2"
+        ]
+      },
+      {
+        "gaze_pred": {
+          "order": [
+            "P2",
+            "P4",
+            "P1",
+            "P3"
+          ],
+          "rho": 0.0,
+          "top1": false
+        },
+        "gaze_true": {
+          "order": [
+            "P2",
+            "P1",
+            "P4",
+            "P3"
+          ],
+          "rho": 0.6,
+          "top1": false
+        },
+        "meeting": "IS1008b",
+        "seat_baseline": {
+          "order": [
+            "P1",
+            "P3",
+            "P2",
+            "P4"
+          ],
+          "rho": 0.8,
+          "top1": true
+        },
+        "truth": [
+          "P1",
+          "P2",
+          "P3",
+          "P4"
+        ]
+      },
+      {
+        "gaze_pred": {
+          "order": [
+            "P2",
+            "P3",
+            "P1",
+            "P4"
+          ],
+          "rho": -0.4,
+          "top1": false
+        },
+        "gaze_true": {
+          "order": [
+            "P2",
+            "P3",
+            "P1",
+            "P4"
+          ],
+          "rho": -0.4,
+          "top1": false
+        },
+        "meeting": "IS1008d",
+        "seat_baseline": {
+          "order": [
+            "P1",
+            "P3",
+            "P2",
+            "P4"
+          ],
+          "rho": 0.8,
+          "top1": true
+        },
+        "truth": [
+          "P1",
+          "P3",
+          "P4",
+          "P2"
+        ]
+      }
+    ],
+    "summary": {
+      "gaze_pred": {
+        "mean_rank_corr": {
+          "ci95": [
+            -0.1091,
+            0.5091
+          ],
+          "n": 11,
+          "value": 0.1818
+        },
+        "top1": {
+          "ci95": [
+            0.0,
+            0.4545
+          ],
+          "n": 11,
+          "value": 0.1818
+        }
+      },
+      "gaze_true": {
+        "mean_rank_corr": {
+          "ci95": [
+            0.3091,
+            0.8545
+          ],
+          "n": 11,
+          "value": 0.6
+        },
+        "top1": {
+          "ci95": [
+            0.2727,
+            0.8182
+          ],
+          "n": 11,
+          "value": 0.5455
+        }
+      },
+      "random": {
+        "mean_rank_corr": 0.0,
+        "top1": 0.25
+      },
+      "seat_baseline": {
+        "mean_rank_corr": {
+          "ci95": [
+            0.0364,
+            0.7455
+          ],
+          "n": 11,
+          "value": 0.4364
+        },
+        "top1": {
+          "ci95": [
+            0.4545,
+            1.0
+          ],
+          "n": 11,
+          "value": 0.7273
+        }
+      }
+    }
+  },
+  "E3_ablation_edinburgh": {
+    "note": "orientation = facing received from the uncalibrated seat layout",
+    "per_meeting": [
+      {
+        "both 0.6/0.4": {
+          "order": [
+            "P2",
+            "P3",
+            "P1",
+            "P4"
+          ],
+          "rho": -0.8,
+          "top1": false
+        },
+        "gaze only": {
+          "order": [
+            "P2",
+            "P3",
+            "P4",
+            "P1"
+          ],
+          "rho": -0.4,
+          "top1": false
+        },
+        "meeting": "ES2002a",
+        "orientation only": {
+          "order": [
+            "P1",
+            "P3",
+            "P2",
+            "P4"
+          ],
+          "rho": -0.4,
+          "top1": false
+        }
+      },
+      {
+        "both 0.6/0.4": {
+          "order": [
+            "P1",
+            "P2",
+            "P3",
+            "P4"
+          ],
+          "rho": -0.8,
+          "top1": false
+        },
+        "gaze only": {
+          "order": [
+            "P2",
+            "P4",
+            "P3",
+            "P1"
+          ],
+          "rho": -0.2,
+          "top1": false
+        },
+        "meeting": "ES2002b",
+        "orientation only": {
+          "order": [
+            "P1",
+            "P3",
+            "P2",
+            "P4"
+          ],
+          "rho": -0.4,
+          "top1": false
+        }
+      },
+      {
+        "both 0.6/0.4": {
+          "order": [
+            "P2",
+            "P1",
+            "P4",
+            "P3"
+          ],
+          "rho": 0.2,
+          "top1": false
+        },
+        "gaze only": {
+          "order": [
+            "P2",
+            "P4",
+            "P3",
+            "P1"
+          ],
+          "rho": 0.0,
+          "top1": false
+        },
+        "meeting": "ES2003a",
+        "orientation only": {
+          "order": [
+            "P1",
+            "P2",
+            "P4",
+            "P3"
+          ],
+          "rho": 0.4,
+          "top1": false
+        }
+      }
+    ],
+    "summary": {
+      "both 0.6/0.4": {
+        "mean_rank_corr": {
+          "ci95": [
+            -0.8,
+            0.2
+          ],
+          "n": 3,
+          "value": -0.4667
+        },
+        "top1": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n": 3,
+          "value": 0.0
+        }
+      },
+      "gaze only": {
+        "mean_rank_corr": {
+          "ci95": [
+            -0.4,
+            0.0
+          ],
+          "n": 3,
+          "value": -0.2
+        },
+        "top1": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n": 3,
+          "value": 0.0
+        }
+      },
+      "orientation only": {
+        "mean_rank_corr": {
+          "ci95": [
+            -0.4,
+            0.4
+          ],
+          "n": 3,
+          "value": -0.1333
+        },
+        "top1": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n": 3,
+          "value": 0.0
+        }
+      }
+    }
+  },
+  "E4_disengagement_idiap": {
+    "mean_engagement_r": {
+      "ci95": [
+        0.5314,
+        0.6948
+      ],
+      "n": 11,
+      "value": 0.6186
+    },
+    "note": "ground truth = spells computed from AMI's true gaze labels (a proxy, not observed disengagement)",
+    "per_meeting": [
+      {
+        "engagement_r": 0.6272,
+        "f1": 0.2411,
+        "fn": 67,
+        "fp": 40,
+        "meeting": "IS1000a",
+        "precision": 0.2982,
+        "recall": 0.2024,
+        "scored_windows": 597,
+        "tp": 17,
+        "true_positive_windows": 84
+      },
+      {
+        "engagement_r": 0.6903,
+        "f1": 0.1875,
+        "fn": 39,
+        "fp": 13,
+        "meeting": "IS1001a",
+        "precision": 0.3158,
+        "recall": 0.1333,
+        "scored_windows": 356,
+        "tp": 6,
+        "true_positive_windows": 45
+      },
+      {
+        "engagement_r": 0.5059,
+        "f1": 0.0,
+        "fn": 13,
+        "fp": 66,
+        "meeting": "IS1001b",
+        "precision": 0.0,
+        "recall": 0.0,
+        "scored_windows": 844,
+        "tp": 0,
+        "true_positive_windows": 13
+      },
+      {
+        "engagement_r": 0.7731,
+        "f1": 0.0,
+        "fn": 9,
+        "fp": 0,
+        "meeting": "IS1001c",
+        "precision": 0.0,
+        "recall": 0.0,
+        "scored_windows": 575,
+        "tp": 0,
+        "true_positive_windows": 9
+      },
+      {
+        "engagement_r": 0.7979,
+        "f1": 0.0,
+        "fn": 13,
+        "fp": 0,
+        "meeting": "IS1003b",
+        "precision": 0.0,
+        "recall": 0.0,
+        "scored_windows": 655,
+        "tp": 0,
+        "true_positive_windows": 13
+      },
+      {
+        "engagement_r": 0.6666,
+        "f1": 0.0,
+        "fn": 9,
+        "fp": 68,
+        "meeting": "IS1003d",
+        "precision": 0.0,
+        "recall": 0.0,
+        "scored_windows": 840,
+        "tp": 0,
+        "true_positive_windows": 9
+      },
+      {
+        "engagement_r": 0.3158,
+        "f1": 0.0,
+        "fn": 7,
+        "fp": 116,
+        "meeting": "IS1006b",
+        "precision": 0.0,
+        "recall": 0.0,
+        "scored_windows": 860,
+        "tp": 0,
+        "true_positive_windows": 7
+      },
+      {
+        "engagement_r": 0.466,
+        "f1": 0.1935,
+        "fn": 0,
+        "fp": 75,
+        "meeting": "IS1006d",
+        "precision": 0.1071,
+        "recall": 1.0,
+        "scored_windows": 732,
+        "tp": 9,
+        "true_positive_windows": 9
+      },
+      {
+        "engagement_r": 0.6925,
+        "f1": 0.0,
+        "fn": 25,
+        "fp": 0,
+        "meeting": "IS1008a",
+        "precision": 0.0,
+        "recall": 0.0,
+        "scored_windows": 373,
+        "tp": 0,
+        "true_positive_windows": 25
+      },
+      {
+        "engagement_r": 0.6596,
+        "f1": 0.2414,
+        "fn": 27,
+        "fp": 17,
+        "meeting": "IS1008b",
+        "precision": 0.2917,
+        "recall": 0.2059,
+        "scored_windows": 705,
+        "tp": 7,
+        "true_positive_windows": 34
+      },
+      {
+        "engagement_r": 0.6096,
+        "f1": 0.0,
+        "fn": 20,
+        "fp": 0,
+        "meeting": "IS1008d",
+        "precision": 0.0,
+        "recall": 0.0,
+        "scored_windows": 588,
+        "tp": 0,
+        "true_positive_windows": 20
+      }
+    ],
+    "pooled_f1": {
+      "ci95": [
+        0.0392,
+        0.1805
+      ],
+      "n": 11,
+      "value": 0.1111
+    }
+  },
+  "settings": {
+    "bootstrap": "2000 resamples of meetings, seed 13",
+    "coverage_for_E4": 0.8,
+    "gaze_features": [
+      "head_yaw",
+      "head_pitch",
+      "eye_h",
+      "eye_v"
+    ],
+    "window_s": 10.0
+  }
+}
