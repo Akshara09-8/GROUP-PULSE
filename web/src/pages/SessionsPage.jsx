@@ -9,9 +9,13 @@ export default function SessionsPage() {
 
   useEffect(() => {
     let live = true
-    const load = () => api.sessions().then((s) => live && setSessions(s)).catch((e) => live && setError(e))
+    // A sleeping free server (Hugging Face Space) can take ~30-60 s to wake: keep retrying every 5 s
+    // and clear the message as soon as it answers (test T6.1). The same poll keeps uploads current.
+    const load = () => api.sessions()
+      .then((s) => { if (live) { setSessions(s); setError(null) } })
+      .catch((e) => live && setError(e))
     load()
-    const t = setInterval(load, 5000)   // keeps processing uploads up to date
+    const t = setInterval(load, 5000)
     return () => { live = false; clearInterval(t) }
   }, [])
 

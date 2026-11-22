@@ -8,24 +8,28 @@ Planning doc: phases, test cases, tech stack and database options live in the *G
 
 | Phase | What | State |
 | --- | --- | --- |
-| 0 | Setup and data (repo, AMI loader, alignment, splits) | Checks pass on all 5 demo meetings; CI and Docker not run yet |
-| 1 | Perception pipeline (tracking, head pose, gaze, torso) | Code complete; T1.4 and T1.5 below target (see verdict) |
-| 2 | Social metrics (dominance, engagement, rapport) | Metrics + T2.1–T2.8 done; dominance being re-scored with the Idiap-trained gaze model |
-| 3 | Backend and storage (FastAPI, SQLite/Supabase) | API, worker, retention, AMI import done; T3.1–T3.7 pass on SQLite. Uploads await a single-camera reader; Supabase untested |
-| 4 | Frontend UI (React) | Four pages, four colour schemes, 15 tests; runs against the real API. Video overlay (T4.2) waits on uploads |
+| 0 | Setup and data (repo, AMI loader, alignment, splits) | Done; checks pass on all 5 demo meetings |
+| 1 | Perception pipeline (close-up and single-camera) | Done; T1.4 and T1.5 below target (see verdict). Single-camera uploads are experimental |
+| 2 | Social metrics (dominance, engagement, rapport) | Done; T2.1–T2.8 pass; attention uses adjusted counting |
+| 3 | Backend and storage (FastAPI, SQLite/Supabase) | Done; T3.1–T3.7 pass on SQLite; uploads processed end to end; Supabase untested |
+| 4 | Frontend UI (React) | Done; four pages, four colour schemes, video with gaze overlay, 17 tests |
 | 5 | Evaluation | Done: reproducible report in `reports/`. T5.3–T5.5 pass; T1.5, T5.1, T5.2 fail (see below) |
-| 6 | Deploy and launch | Not started |
+| 6 | Deploy and launch | Built and tested; going live needs your accounts: see [DEPLOY.md](DEPLOY.md) |
+
+Tests: 141 Python (`pytest`) and 17 web (`npm test`).
 
 ## Layout
 
 ```
-pipeline/grouppulse/   Python package: data loading now, perception + metrics later
-configs/               Meeting lists and dataset URLs (ami.toml)
-scripts/               setup.ps1 (Windows) and other helpers
+pipeline/grouppulse/   Python package: data, perception, social metrics, api, evaluation
+configs/               Meeting lists, room layouts, calibrated gaze models, social-metric settings
+demo/sessions/         Pre-computed AMI demo sessions shown without uploads
+deploy/huggingface/    Backend container for a Hugging Face Docker Space
+scripts/               setup.ps1, build_tracks.py (bulk processing), export_demo.py (static demo)
+reports/               Phase 5 evaluation report and results
 tests/                 pytest suite; tests/fixtures has a tiny AMI-style sample
-api/                   FastAPI backend (Phase 3)
-web/                   React + Vite frontend (Phase 4)
-notebooks/             Colab/Kaggle notebooks for batch processing
+api/                   Backend notes (code is in pipeline/grouppulse/api)
+web/                   React + Vite frontend
 design/                UI colour-scheme mockups
 data/                  Downloaded data (git-ignored)
 ```
@@ -174,6 +178,16 @@ What the numbers say:
 - **The gaze reader is the bottleneck.** About 60% gaze accuracy is not enough to rank people: the model over-predicts "P2" as the target (most looked-at in 7 of 11 Idiap meetings and all 3 unseen Edinburgh meetings).
 - **Where "P2" comes from, and the fix (22 Nov 2026).** Measured confusion matrices show two camera-specific errors in the Idiap room: glances at the *whiteboard* are read as P2 (64% from Close-up 1, 53% from Close-up 3), and glances at P4 are read as P2 (39% from Close-up 3). P2's attention received was over-estimated in 9 of 11 held-out meetings. Session-level attention now uses **adjusted counting** (`perception/quantify.py`): each camera's confusion is measured on held-out training series and undone when counting. Top-1 rose from 2/11 to 5/11, rank correlation only from +0.18 to +0.22, still below the seat baseline. (A prototype showed +0.44, but that came from a non-standard solver and did not hold up.) Flat class priors (+0.22) and per-meeting EM prior adaptation (accuracy fell ~10 points) were also tried and not adopted.
 - **Seating predicts talking.** The project manager tends to take the same seat, so a seat baseline is strong (Idiap top-1 73%). Any future claim has to beat it.
+
+## Uploads (single camera, experimental)
+
+An upload is one camera filming the whole group, unlike AMI's one close-up per person. `perception/single.py` finds every face (YuNet), links detections into fixed seats (tracks locate the seats; every detection goes to the nearest seat), reads head pose (MediaPipe mesh on a crop, else YuNet) and picks gaze targets in the image plane: looking down is "table", otherwise the other head nearest to the gaze line within 35°, else "away". Torso comes from YOLO-pose at 1 fps. It runs at about 0.93× real time on CPU at 2.5 fps sampling.
+
+It is **not validated**: there are no labels for single-camera video, and the image has no depth, so a person further along the gaze line can be chosen over a nearer one. Every upload's results carry a warning saying so. The worker saves per-frame face boxes and targets beside the video; the Session page plays the video with boxes and gaze arrows in sync (T4.2), and both are deleted after 24 hours.
+
+## Deploy (Phase 6)
+
+All deploy pieces are in the repo and tested: a Docker image for a Hugging Face Space (`deploy/huggingface/`), a static demo build that needs no server (`VITE_DEMO=1`, published to GitHub Pages by `.github/workflows/pages.yml`), a Hugging Face deploy workflow, a 5-minute uptime ping, an hourly video clean-up, a "server is waking up" state in the app, and optional Sentry error tracking. Going live needs your own free accounts; [DEPLOY.md](DEPLOY.md) lists every step. The Docker image has not been built on this machine (Docker is not installed); its first build happens on Hugging Face.
 
 ## Data credit and licence
 

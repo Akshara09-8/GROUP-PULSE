@@ -51,10 +51,19 @@ describe('Sessions page', () => {
     expect(screen.getByText(/not supported yet/)).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Try AMI demo' })).toHaveAttribute('href', '/sessions/es2002a')
   })
-  it('explains when the server cannot be reached', async () => {
-    vi.spyOn(global, 'fetch').mockRejectedValue(new TypeError('Failed to fetch'))
+  it('T6.1 shows a waking-up message, keeps retrying, and clears it when the server answers', async () => {
+    let calls = 0
+    vi.spyOn(global, 'fetch').mockImplementation(async () => {
+      if (++calls < 2) throw new TypeError('Failed to fetch')
+      return new Response(JSON.stringify([]), { status: 200 })
+    })
+    vi.useFakeTimers({ shouldAdvanceTime: true })
     at('/')
-    expect(await screen.findByRole('alert')).toHaveTextContent(/can't reach the group pulse server/i)
+    expect(await screen.findByRole('alert')).toHaveTextContent(/waking up/i)
+    await vi.advanceTimersByTimeAsync(5500)
+    expect(await screen.findByText('No sessions yet')).toBeInTheDocument()
+    expect(screen.queryByRole('alert')).toBeNull()
+    vi.useRealTimers()
   })
 })
 

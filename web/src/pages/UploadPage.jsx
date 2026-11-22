@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { api } from '../api.js'
+import { DEMO, DEMO_UPLOAD_MESSAGE, api } from '../api.js'
 import { ErrorBox, StatusPill } from '../components/ui.jsx'
 
 const STEPS = [['uploaded', 'Video uploaded'], ['queued', 'Waiting for the free server'],
@@ -43,6 +43,7 @@ export default function UploadPage() {
     <div className="grid gap-4 md:grid-cols-2">
       <form onSubmit={submit} className="card grid content-start gap-4" aria-label="New session">
         <h1 className="text-xl font-semibold">New session</h1>
+        {DEMO && <p className="rounded-md bg-soft px-3 py-2 text-sm">{DEMO_UPLOAD_MESSAGE}</p>}
         <button type="button" onClick={() => input.current?.click()}
           className="grid justify-items-center gap-1 rounded-lg border-2 border-dashed border-accent bg-soft px-4 py-6 text-center">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgb(var(--accent))" strokeWidth="1.8" aria-hidden="true">
@@ -70,7 +71,7 @@ export default function UploadPage() {
           <span>Everyone in this video agreed to be analysed. No faces or names are stored, and the video is deleted after 24 hours.</span>
         </label>
         {error && <ErrorBox error={error} />}
-        <button className="btn justify-self-start" disabled={busy || (job && !['done', 'failed'].includes(job.status))}>
+        <button className="btn justify-self-start" disabled={DEMO || busy || (job && !['done', 'failed'].includes(job.status))}>
           {busy ? 'Uploading…' : 'Start analysis'}
         </button>
       </form>

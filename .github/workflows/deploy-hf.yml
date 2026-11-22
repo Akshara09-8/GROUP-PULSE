@@ -1,0 +1,46 @@
+# Backend (API + upload processing) to a Hugging Face Docker Space.
+# One-time setup: create a Docker Space on huggingface.co, then in this repo:
+#   Secrets: HF_TOKEN (a Hugging Face token with write access)
+#   Variables: HF_SPACE (e.g. your-name/group-pulse-api)
+# Without them this workflow does nothing.
+name: deploy backend
+
+on:
+  push:
+    branches: [main]
+    paths: ["pipeline/**", "configs/**", "demo/**", "deploy/huggingface/**", "pyproject.toml"]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      HF_SPACE: ${{ vars.HF_SPACE }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Skip when not configured
+        id: check
+        run: |
+          if [ -z "$HF_TOKEN" ] || [ -z "$HF_SPACE" ]; then
+            echo "HF_TOKEN / HF_SPACE not set; skipping deploy."; echo "go=false" >> "$GITHUB_OUTPUT"
+          else echo "go=true" >> "$GITHUB_OUTPUT"; fi
+      - name: Assemble the Space
+        if: steps.check.outputs.go == 'true'
+        run: |
+          mkdir space
+          cp -r pipeline configs demo pyproject.toml space/
+          cp deploy/huggingface/Dockerfile space/Dockerfile
+          cp deploy/huggingface/README.md space/README.md
+      - name: Upload to Hugging Face
+        if: steps.check.outputs.go == 'true'
+        run: |
+          python -m pip install -q huggingface_hub
+          python - <<'EOF'
+          import os
+          from huggingface_hub import HfApi
+          HfApi(token=os.environ["HF_TOKEN"]).upload_folder(
+              folder_path="space", repo_id=os.environ["HF_SPACE"], repo_type="space",
+              commit_message=f"Deploy {os.environ['GITHUB_SHA'][:7]}", delete_patterns=["*"])
+          print("pushed to https://huggingface.co/spaces/" + os.environ["HF_SPACE"])
+          EOF

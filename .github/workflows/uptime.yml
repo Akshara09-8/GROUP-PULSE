@@ -1,0 +1,23 @@
+# T6.5: ping the backend every 5 minutes (GitHub may delay scheduled runs at busy times).
+# A failed run means the API did not answer; GitHub emails the repo owner about failed runs.
+# The ping also keeps a sleeping free Space awake. Setup: repo variable API_URL
+# (e.g. https://your-name-group-pulse-api.hf.space). Without it this does nothing.
+name: uptime
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    if: vars.API_URL != ''
+    steps:
+      - name: GET /health
+        run: |
+          for i in 1 2 3; do
+            code=$(curl -s -o body.json -w '%{http_code}' --max-time 90 "${{ vars.API_URL }}/health") && [ "$code" = 200 ] && cat body.json && exit 0
+            echo "attempt $i: HTTP $code"; sleep 20
+          done
+          exit 1

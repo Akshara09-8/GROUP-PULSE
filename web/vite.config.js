@@ -3,7 +3,9 @@ import react from '@vitejs/plugin-react'
 
 // Dev: the API runs on :8000 (python -m grouppulse.api); /api/* is proxied to it.
 // Production: set VITE_API_URL to the deployed backend (e.g. a Hugging Face Space).
+// VITE_BASE: sub-path the site is served from (GitHub Pages project site: /GROUP-PULSE/).
 export default defineConfig({
+  base: process.env.VITE_BASE || '/',
   plugins: [react()],
   server: {
     port: 5173,

@@ -1,0 +1,6257 @@
+{
+  "session": "ES2002b",
+  "people": [
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ],
+  "duration_s": 2268.8,
+  "warnings": [],
+  "per_person": {
+    "P1": {
+      "attention_received": 0.041,
+      "facing_received": 0.8155,
+      "dominance": 0.041,
+      "engagement": 0.4873,
+      "gaze_shares": {
+        "away": 0.2959,
+        "table": 0.305,
+        "P2": 0.1894,
+        "P3": 0.039,
+        "P4": 0.1661,
+        "screen": 0.0045
+      },
+      "disengaged_s": 808.2
+    },
+    "P2": {
+      "attention_received": 0.1858,
+      "facing_received": 0.5529,
+      "dominance": 0.1858,
+      "engagement": 0.5713,
+      "gaze_shares": {
+        "away": 0.2768,
+        "screen": 0.1206,
+        "P4": 0.2521,
+        "table": 0.3026,
+        "P3": 0.033,
+        "P1": 0.0149
+      },
+      "disengaged_s": 336.0
+    },
+    "P3": {
+      "attention_received": 0.0701,
+      "facing_received": 0.6369,
+      "dominance": 0.0701,
+      "engagement": 0.656,
+      "gaze_shares": {
+        "P4": 0.1268,
+        "table": 0.2556,
+        "P2": 0.1246,
+        "P1": 0.0498,
+        "away": 0.2224,
+        "screen": 0.2191,
+        "whiteboard": 0.0018
+      },
+      "disengaged_s": 0
+    },
+    "P4": {
+      "attention_received": 0.178,
+      "facing_received": 0.3893,
+      "dominance": 0.178,
+      "engagement": 0.7649,
+      "gaze_shares": {
+        "P3": 0.1189,
+        "P1": 0.0528,
+        "table": 0.5637,
+        "away": 0.0182,
+        "P2": 0.2432,
+        "whiteboard": 0.0033
+      },
+      "disengaged_s": 0
+    }
+  },
+  "group": {
+    "dominant": "P2",
+    "dominance_rank": [
+      "P2",
+      "P4",
+      "P3",
+      "P1"
+    ],
+    "mutual_gaze_rate": 0.0233,
+    "gaze_following_rate": 0.3997,
+    "facing_mean": 0.5987,
+    "rapport_index": 0.2582,
+    "attention_method": "raw",
+    "attention_raw": {
+      "P1": 0.041,
+      "P2": 0.1858,
+      "P3": 0.0701,
+      "P4": 0.178
+    }
+  },
+  "disengaged_spells": [
+    {
+      "person": "P1",
+      "start": 1366.8,
+      "end": 2175.0
+    },
+    {
+      "person": "P2",
+      "start": 663.0,
+      "end": 707.0
+    },
+    {
+      "person": "P2",
+      "start": 711.6,
+      "end": 819.4
+    },
+    {
+      "person": "P2",
+      "start": 1075.6,
+      "end": 1175.6
+    },
+    {
+      "person": "P2",
+      "start": 1329.0,
+      "end": 1362.2
+    },
+    {
+      "person": "P2",
+      "start": 2196.8,
+      "end": 2247.8
+    }
+  ],
+  "windows": [
+    {
+      "start": 0.0,
+      "end": 10.0,
+      "attention": {
+        "P1": 0.1449,
+        "P2": 0.029,
+        "P3": 0.029,
+        "P4": 0.0467
+      },
+      "dominance": {
+        "P1": 0.1449,
+        "P2": 0.029,
+        "P3": 0.029,
+        "P4": 0.0467
+      },
+      "engagement": {
+        "P1": 0.419,
+        "P2": 0.615,
+        "P3": 0.713,
+        "P4": 0.631
+      },
+      "mutual_gaze": 0.0038,
+      "addressee": {
+        "person": "P1",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 10.0,
+      "end": 20.0,
+      "attention": {
+        "P1": 0.0915,
+        "P2": 0.1549,
+        "P3": 0.1761,
+        "P4": 0.0467
+      },
+      "dominance": {
+        "P1": 0.0915,
+        "P2": 0.1549,
+        "P3": 0.1761,
+        "P4": 0.0467
+      },
+      "engagement": {
+        "P1": 0.558,
+        "P2": 0.503,
+        "P3": 0.797,
+        "P4": 0.7125
+      },
+      "mutual_gaze": 0.0217,
+      "addressee": {
+        "person": "P3",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 20.0,
+      "end": 30.0,
+      "attention": {
+        "P1": 0.1333,
+        "P2": 0.0417,
+        "P3": 0.1597,
+        "P4": 0.1042
+      },
+      "dominance": {
+        "P1": 0.1333,
+        "P2": 0.0417,
+        "P3": 0.1597,
+        "P4": 0.1042
+      },
+      "engagement": {
+        "P1": 0.496,
+        "P2": 0.497,
+        "P3": 0.603,
+        "P4": 0.779
+      },
+      "mutual_gaze": 0.0106,
+      "addressee": {
+        "person": "P3",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 30.0,
+      "end": 40.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.08,
+        "P3": 0.0338,
+        "P4": 0.1284
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.08,
+        "P3": 0.0338,
+        "P4": 0.1284
+      },
+      "engagement": {
+        "P1": 0.678,
+        "P2": 0.515,
+        "P3": 0.636,
+        "P4": 0.699
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 40.0,
+      "end": 50.0,
+      "attention": {
+        "P1": 0.0067,
+        "P2": 0.1,
+        "P3": 0.12,
+        "P4": 0.04
+      },
+      "dominance": {
+        "P1": 0.0067,
+        "P2": 0.1,
+        "P3": 0.12,
+        "P4": 0.04
+      },
+      "engagement": {
+        "P1": 0.692,
+        "P2": 0.529,
+        "P3": 0.41,
+        "P4": 0.725
+      },
+      "mutual_gaze": 0.0033,
+      "addressee": {
+        "person": "P3",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 50.0,
+      "end": 60.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0267,
+        "P3": 0.0467,
+        "P4": 0.3133
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0267,
+        "P3": 0.0467,
+        "P4": 0.3133
+      },
+      "engagement": {
+        "P1": 0.811,
+        "P2": 0.587,
+        "P3": 0.287,
+        "P4": 0.72
+      },
+      "mutual_gaze": 0.0133,
+      "addressee": {
+        "person": "P3",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 60.0,
+      "end": 70.0,
+      "attention": {
+        "P1": 0.0333,
+        "P2": 0.02,
+        "P3": 0.0867,
+        "P4": 0.06
+      },
+      "dominance": {
+        "P1": 0.0333,
+        "P2": 0.02,
+        "P3": 0.0867,
+        "P4": 0.06
+      },
+      "engagement": {
+        "P1": 0.475,
+        "P2": 0.818,
+        "P3": 0.319,
+        "P4": 0.769
+      },
+      "mutual_gaze": 0.01,
+      "addressee": {
+        "person": "P3",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 70.0,
+      "end": 80.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.02,
+        "P3": 0.0067,
+        "P4": 0.1133
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.02,
+        "P3": 0.0067,
+        "P4": 0.1133
+      },
+      "engagement": {
+        "P1": 0.459,
+        "P2": 0.643,
+        "P3": 0.634,
+        "P4": 0.657
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 80.0,
+      "end": 90.0,
+      "attention": {
+        "P1": 0.0133,
+        "P2": 0.0267,
+        "P3": 0.18,
+        "P4": 0.1
+      },
+      "dominance": {
+        "P1": 0.0133,
+        "P2": 0.0267,
+        "P3": 0.18,
+        "P4": 0.1
+      },
+      "engagement": {
+        "P1": 0.558,
+        "P2": 0.664,
+        "P3": 0.706,
+        "P4": 0.755
+      },
+      "mutual_gaze": 0.0167,
+      "addressee": {
+        "person": "P3",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 90.0,
+      "end": 100.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 0.1067,
+        "P4": 0.2067
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 0.1067,
+        "P4": 0.2067
+      },
+      "engagement": {
+        "P1": 0.34,
+        "P2": 0.776,
+        "P3": 0.651,
+        "P4": 0.741
+      },
+      "mutual_gaze": 0.0133,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 100.0,
+      "end": 110.0,
+      "attention": {
+        "P1": 0.0067,
+        "P2": 0.0,
+        "P3": 0.06,
+        "P4": 0.0867
+      },
+      "dominance": {
+        "P1": 0.0067,
+        "P2": 0.0,
+        "P3": 0.06,
+        "P4": 0.0867
+      },
+      "engagement": {
+        "P1": 0.3,
+        "P2": 0.517,
+        "P3": 0.586,
+        "P4": 0.706
+      },
+      "mutual_gaze": 0.0067,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 110.0,
+      "end": 120.0,
+      "attention": {
+        "P1": 0.04,
+        "P2": 0.0267,
+        "P3": 0.12,
+        "P4": 0.2067
+      },
+      "dominance": {
+        "P1": 0.04,
+        "P2": 0.0267,
+        "P3": 0.12,
+        "P4": 0.2067
+      },
+      "engagement": {
+        "P1": 0.398,
+        "P2": 0.545,
+        "P3": 0.462,
+        "P4": 0.809
+      },
+      "mutual_gaze": 0.04,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 120.0,
+      "end": 130.0,
+      "attention": {
+        "P1": 0.0133,
+        "P2": 0.0,
+        "P3": 0.0933,
+        "P4": 0.08
+      },
+      "dominance": {
+        "P1": 0.0133,
+        "P2": 0.0,
+        "P3": 0.0933,
+        "P4": 0.08
+      },
+      "engagement": {
+        "P1": 0.34,
+        "P2": 0.482,
+        "P3": 0.611,
+        "P4": 0.762
+      },
+      "mutual_gaze": 0.0333,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 130.0,
+      "end": 140.0,
+      "attention": {
+        "P1": 0.02,
+        "P2": 0.02,
+        "P3": 0.1,
+        "P4": 0.0867
+      },
+      "dominance": {
+        "P1": 0.02,
+        "P2": 0.02,
+        "P3": 0.1,
+        "P4": 0.0867
+      },
+      "engagement": {
+        "P1": 0.391,
+        "P2": 0.482,
+        "P3": 0.674,
+        "P4": 0.783
+      },
+      "mutual_gaze": 0.01,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 140.0,
+      "end": 150.0,
+      "attention": {
+        "P1": 0.0133,
+        "P2": 0.0067,
+        "P3": 0.0867,
+        "P4": 0.4067
+      },
+      "dominance": {
+        "P1": 0.0133,
+        "P2": 0.0067,
+        "P3": 0.0867,
+        "P4": 0.4067
+      },
+      "engagement": {
+        "P1": 0.629,
+        "P2": 0.538,
+        "P3": 0.821,
+        "P4": 0.755
+      },
+      "mutual_gaze": 0.0233,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 150.0,
+      "end": 160.0,
+      "attention": {
+        "P1": 0.0216,
+        "P2": 0.02,
+        "P3": 0.2014,
+        "P4": 0.0504
+      },
+      "dominance": {
+        "P1": 0.0216,
+        "P2": 0.02,
+        "P3": 0.2014,
+        "P4": 0.0504
+      },
+      "engagement": {
+        "P1": 0.454,
+        "P2": 0.5065,
+        "P3": 0.35,
+        "P4": 0.874
+      },
+      "mutual_gaze": 0.0075,
+      "addressee": {
+        "person": "P3",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 160.0,
+      "end": 170.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0067,
+        "P3": 0.14,
+        "P4": 0.2133
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0067,
+        "P3": 0.14,
+        "P4": 0.2133
+      },
+      "engagement": {
+        "P1": 0.587,
+        "P2": 0.51,
+        "P3": 0.429,
+        "P4": 0.783
+      },
+      "mutual_gaze": 0.05,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 170.0,
+      "end": 180.0,
+      "attention": {
+        "P1": 0.0333,
+        "P2": 0.02,
+        "P3": 0.38,
+        "P4": 0.2267
+      },
+      "dominance": {
+        "P1": 0.0333,
+        "P2": 0.02,
+        "P3": 0.38,
+        "P4": 0.2267
+      },
+      "engagement": {
+        "P1": 0.515,
+        "P2": 0.769,
+        "P3": 0.726,
+        "P4": 0.845
+      },
+      "mutual_gaze": 0.08,
+      "addressee": {
+        "person": "P3",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 180.0,
+      "end": 190.0,
+      "attention": {
+        "P1": 0.0133,
+        "P2": 0.04,
+        "P3": 0.1867,
+        "P4": 0.1333
+      },
+      "dominance": {
+        "P1": 0.0133,
+        "P2": 0.04,
+        "P3": 0.1867,
+        "P4": 0.1333
+      },
+      "engagement": {
+        "P1": 0.594,
+        "P2": 0.608,
+        "P3": 0.72,
+        "P4": 0.704
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P3",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 190.0,
+      "end": 200.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0067,
+        "P3": 0.14,
+        "P4": 0.2667
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0067,
+        "P3": 0.14,
+        "P4": 0.2667
+      },
+      "engagement": {
+        "P1": 0.511,
+        "P2": 0.601,
+        "P3": 0.825,
+        "P4": 0.685
+      },
+      "mutual_gaze": 0.01,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 200.0,
+      "end": 210.0,
+      "attention": {
+        "P1": 0.0667,
+        "P2": 0.0667,
+        "P3": 0.18,
+        "P4": 0.2467
+      },
+      "dominance": {
+        "P1": 0.0667,
+        "P2": 0.0667,
+        "P3": 0.18,
+        "P4": 0.2467
+      },
+      "engagement": {
+        "P1": 0.69,
+        "P2": 0.44,
+        "P3": 0.534,
+        "P4": 0.853
+      },
+      "mutual_gaze": 0.0433,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 210.0,
+      "end": 220.0,
+      "attention": {
+        "P1": 0.0897,
+        "P2": 0.22,
+        "P3": 0.0,
+        "P4": 0.0552
+      },
+      "dominance": {
+        "P1": 0.0897,
+        "P2": 0.22,
+        "P3": 0.0,
+        "P4": 0.0552
+      },
+      "engagement": {
+        "P1": 0.767,
+        "P2": 0.5625,
+        "P3": 0.337,
+        "P4": 0.713
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P3",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 220.0,
+      "end": 230.0,
+      "attention": {
+        "P1": 0.1,
+        "P2": 0.0067,
+        "P3": 0.0,
+        "P4": 0.01
+      },
+      "dominance": {
+        "P1": 0.1,
+        "P2": 0.0067,
+        "P3": 0.0,
+        "P4": 0.01
+      },
+      "engagement": {
+        "P1": 0.314,
+        "P2": 0.25,
+        "P3": 0.597,
+        "P4": 0.72
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 230.0,
+      "end": 240.0,
+      "attention": {
+        "P1": 0.39,
+        "P2": 0.0267,
+        "P3": 0.0,
+        "P4": 0.31
+      },
+      "dominance": {
+        "P1": 0.39,
+        "P2": 0.0267,
+        "P3": 0.0,
+        "P4": 0.31
+      },
+      "engagement": {
+        "P1": 0.356,
+        "P2": 0.25,
+        "P3": 0.546,
+        "P4": 0.875
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 240.0,
+      "end": 250.0,
+      "attention": {
+        "P1": 0.2066,
+        "P2": 0.12,
+        "P3": 0.0165,
+        "P4": 0.1488
+      },
+      "dominance": {
+        "P1": 0.2066,
+        "P2": 0.12,
+        "P3": 0.0165,
+        "P4": 0.1488
+      },
+      "engagement": {
+        "P1": 0.545,
+        "P2": 0.497,
+        "P3": 0.456,
+        "P4": 0.854
+      },
+      "mutual_gaze": 0.0047,
+      "addressee": {
+        "person": "P1",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 250.0,
+      "end": 260.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0667,
+        "P3": 0.0067,
+        "P4": 0.24
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0667,
+        "P3": 0.0067,
+        "P4": 0.24
+      },
+      "engagement": {
+        "P1": 0.944,
+        "P2": 0.902,
+        "P3": 0.51,
+        "P4": 0.657
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 260.0,
+      "end": 270.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0733,
+        "P3": 0.0133,
+        "P4": 0.0267
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0733,
+        "P3": 0.0133,
+        "P4": 0.0267
+      },
+      "engagement": {
+        "P1": 0.412,
+        "P2": 0.832,
+        "P3": 0.521,
+        "P4": 0.741
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 270.0,
+      "end": 280.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.3333,
+        "P3": 0.02,
+        "P4": 0.0867
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.3333,
+        "P3": 0.02,
+        "P4": 0.0867
+      },
+      "engagement": {
+        "P1": 0.482,
+        "P2": 0.566,
+        "P3": 0.296,
+        "P4": 0.979
+      },
+      "mutual_gaze": 0.02,
+      "addressee": {
+        "person": "P3",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 280.0,
+      "end": 290.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.36,
+        "P3": 0.0467,
+        "P4": 0.3067
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.36,
+        "P3": 0.0467,
+        "P4": 0.3067
+      },
+      "engagement": {
+        "P1": 1.0,
+        "P2": 0.634,
+        "P3": 0.684,
+        "P4": 0.937
+      },
+      "mutual_gaze": 0.0333,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 290.0,
+      "end": 300.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.1733,
+        "P3": 0.0933,
+        "P4": 0.1867
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.1733,
+        "P3": 0.0933,
+        "P4": 0.1867
+      },
+      "engagement": {
+        "P1": 0.704,
+        "P2": 0.576,
+        "P3": 0.356,
+        "P4": 0.909
+      },
+      "mutual_gaze": 0.0067,
+      "addressee": {
+        "person": "P3",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 300.0,
+      "end": 310.0,
+      "attention": {
+        "P1": 0.0067,
+        "P2": 0.1267,
+        "P3": 0.04,
+        "P4": 0.1867
+      },
+      "dominance": {
+        "P1": 0.0067,
+        "P2": 0.1267,
+        "P3": 0.04,
+        "P4": 0.1867
+      },
+      "engagement": {
+        "P1": 0.517,
+        "P2": 0.776,
+        "P3": 0.508,
+        "P4": 0.818
+      },
+      "mutual_gaze": 0.01,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 310.0,
+      "end": 320.0,
+      "attention": {
+        "P1": 0.0133,
+        "P2": 0.0,
+        "P3": 0.0,
+        "P4": 0.0667
+      },
+      "dominance": {
+        "P1": 0.0133,
+        "P2": 0.0,
+        "P3": 0.0,
+        "P4": 0.0667
+      },
+      "engagement": {
+        "P1": 0.35,
+        "P2": 0.804,
+        "P3": 0.501,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 320.0,
+      "end": 330.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0333,
+        "P3": 0.0,
+        "P4": 0.2067
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0333,
+        "P3": 0.0,
+        "P4": 0.2067
+      },
+      "engagement": {
+        "P1": 0.405,
+        "P2": 0.832,
+        "P3": 0.566,
+        "P4": 0.685
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 330.0,
+      "end": 340.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.18,
+        "P3": 0.0,
+        "P4": 0.2267
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.18,
+        "P3": 0.0,
+        "P4": 0.2267
+      },
+      "engagement": {
+        "P1": 0.793,
+        "P2": 0.795,
+        "P3": 0.805,
+        "P4": 0.685
+      },
+      "mutual_gaze": 0.0033,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 340.0,
+      "end": 350.0,
+      "attention": {
+        "P1": 0.0267,
+        "P2": 0.06,
+        "P3": 0.0267,
+        "P4": 0.2267
+      },
+      "dominance": {
+        "P1": 0.0267,
+        "P2": 0.06,
+        "P3": 0.0267,
+        "P4": 0.2267
+      },
+      "engagement": {
+        "P1": 0.79,
+        "P2": 0.538,
+        "P3": 0.35,
+        "P4": 0.699
+      },
+      "mutual_gaze": 0.01,
+      "addressee": {
+        "person": "P3",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 350.0,
+      "end": 360.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0933,
+        "P3": 0.0133,
+        "P4": 0.1
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0933,
+        "P3": 0.0133,
+        "P4": 0.1
+      },
+      "engagement": {
+        "P1": 0.718,
+        "P2": 0.692,
+        "P3": 0.561,
+        "P4": 0.692
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 360.0,
+      "end": 370.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.2067,
+        "P3": 0.0,
+        "P4": 0.0333
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.2067,
+        "P3": 0.0,
+        "P4": 0.0333
+      },
+      "engagement": {
+        "P1": 0.475,
+        "P2": 0.538,
+        "P3": 1.0,
+        "P4": 0.867
+      },
+      "mutual_gaze": 0.0133,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 370.0,
+      "end": 380.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.2067,
+        "P3": 0.1,
+        "P4": 0.04
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.2067,
+        "P3": 0.1,
+        "P4": 0.04
+      },
+      "engagement": {
+        "P1": 0.42,
+        "P2": 0.334,
+        "P3": 0.972,
+        "P4": 0.895
+      },
+      "mutual_gaze": 0.01,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 380.0,
+      "end": 390.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0533,
+        "P3": 0.0333,
+        "P4": 0.1867
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0533,
+        "P3": 0.0333,
+        "P4": 0.1867
+      },
+      "engagement": {
+        "P1": 0.431,
+        "P2": 0.62,
+        "P3": 0.494,
+        "P4": 0.741
+      },
+      "mutual_gaze": 0.0167,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 390.0,
+      "end": 400.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.04,
+        "P3": 0.0,
+        "P4": 0.3
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.04,
+        "P3": 0.0,
+        "P4": 0.3
+      },
+      "engagement": {
+        "P1": 0.72,
+        "P2": 0.72,
+        "P3": 0.965,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 400.0,
+      "end": 410.0,
+      "attention": {
+        "P1": 0.0067,
+        "P2": 0.1933,
+        "P3": 0.1733,
+        "P4": 0.2667
+      },
+      "dominance": {
+        "P1": 0.0067,
+        "P2": 0.1933,
+        "P3": 0.1733,
+        "P4": 0.2667
+      },
+      "engagement": {
+        "P1": 0.902,
+        "P2": 0.297,
+        "P3": 0.895,
+        "P4": 0.811
+      },
+      "mutual_gaze": 0.0367,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 410.0,
+      "end": 420.0,
+      "attention": {
+        "P1": 0.0733,
+        "P2": 0.3333,
+        "P3": 0.0667,
+        "P4": 0.2533
+      },
+      "dominance": {
+        "P1": 0.0733,
+        "P2": 0.3333,
+        "P3": 0.0667,
+        "P4": 0.2533
+      },
+      "engagement": {
+        "P1": 0.94,
+        "P2": 0.62,
+        "P3": 1.0,
+        "P4": 0.818
+      },
+      "mutual_gaze": 0.0267,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 420.0,
+      "end": 430.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.2467,
+        "P3": 0.0333,
+        "P4": 0.06
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.2467,
+        "P3": 0.0333,
+        "P4": 0.06
+      },
+      "engagement": {
+        "P1": 0.579,
+        "P2": 0.436,
+        "P3": 1.0,
+        "P4": 0.769
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 430.0,
+      "end": 440.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.2867,
+        "P3": 0.0333,
+        "P4": 0.2
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.2867,
+        "P3": 0.0333,
+        "P4": 0.2
+      },
+      "engagement": {
+        "P1": 0.865,
+        "P2": 0.52,
+        "P3": 1.0,
+        "P4": 0.916
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 440.0,
+      "end": 450.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.22,
+        "P3": 0.0133,
+        "P4": 0.28
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.22,
+        "P3": 0.0133,
+        "P4": 0.28
+      },
+      "engagement": {
+        "P1": 0.888,
+        "P2": 0.622,
+        "P3": 1.0,
+        "P4": 0.888
+      },
+      "mutual_gaze": 0.01,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 450.0,
+      "end": 460.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.3133,
+        "P3": 0.0267,
+        "P4": 0.04
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.3133,
+        "P3": 0.0267,
+        "P4": 0.04
+      },
+      "engagement": {
+        "P1": 0.453,
+        "P2": 0.573,
+        "P3": 1.0,
+        "P4": 0.972
+      },
+      "mutual_gaze": 0.0133,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 460.0,
+      "end": 470.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.38,
+        "P3": 0.0067,
+        "P4": 0.04
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.38,
+        "P3": 0.0067,
+        "P4": 0.04
+      },
+      "engagement": {
+        "P1": 0.686,
+        "P2": 0.636,
+        "P3": 0.777,
+        "P4": 0.951
+      },
+      "mutual_gaze": 0.0033,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 470.0,
+      "end": 480.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.3667,
+        "P3": 0.0467,
+        "P4": 0.1533
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.3667,
+        "P3": 0.0467,
+        "P4": 0.1533
+      },
+      "engagement": {
+        "P1": 0.603,
+        "P2": 0.462,
+        "P3": 0.575,
+        "P4": 0.937
+      },
+      "mutual_gaze": 0.0233,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 480.0,
+      "end": 490.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.2733,
+        "P3": 0.18,
+        "P4": 0.1333
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.2733,
+        "P3": 0.18,
+        "P4": 0.1333
+      },
+      "engagement": {
+        "P1": 0.783,
+        "P2": 0.494,
+        "P3": 0.93,
+        "P4": 0.972
+      },
+      "mutual_gaze": 0.0133,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 490.0,
+      "end": 500.0,
+      "attention": {
+        "P1": 0.0333,
+        "P2": 0.12,
+        "P3": 0.0333,
+        "P4": 0.0867
+      },
+      "dominance": {
+        "P1": 0.0333,
+        "P2": 0.12,
+        "P3": 0.0333,
+        "P4": 0.0867
+      },
+      "engagement": {
+        "P1": 0.657,
+        "P2": 0.636,
+        "P3": 0.958,
+        "P4": 0.774
+      },
+      "mutual_gaze": 0.0033,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 500.0,
+      "end": 510.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.1333,
+        "P3": 0.16,
+        "P4": 0.18
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.1333,
+        "P3": 0.16,
+        "P4": 0.18
+      },
+      "engagement": {
+        "P1": 0.751,
+        "P2": 0.543,
+        "P3": 0.986,
+        "P4": 0.881
+      },
+      "mutual_gaze": 0.0167,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 510.0,
+      "end": 520.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0533,
+        "P3": 0.4067,
+        "P4": 0.18
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0533,
+        "P3": 0.4067,
+        "P4": 0.18
+      },
+      "engagement": {
+        "P1": 0.291,
+        "P2": 0.224,
+        "P3": 0.818,
+        "P4": 1.0
+      },
+      "mutual_gaze": 0.0733,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 520.0,
+      "end": 530.0,
+      "attention": {
+        "P1": 0.0133,
+        "P2": 0.4467,
+        "P3": 0.14,
+        "P4": 0.22
+      },
+      "dominance": {
+        "P1": 0.0133,
+        "P2": 0.4467,
+        "P3": 0.14,
+        "P4": 0.22
+      },
+      "engagement": {
+        "P1": 0.661,
+        "P2": 0.312,
+        "P3": 0.762,
+        "P4": 0.993
+      },
+      "mutual_gaze": 0.0467,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 530.0,
+      "end": 540.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.4733,
+        "P3": 0.0133,
+        "P4": 0.02
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.4733,
+        "P3": 0.0133,
+        "P4": 0.02
+      },
+      "engagement": {
+        "P1": 0.44,
+        "P2": 0.355,
+        "P3": 0.762,
+        "P4": 0.951
+      },
+      "mutual_gaze": 0.0033,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 540.0,
+      "end": 550.0,
+      "attention": {
+        "P1": 0.0067,
+        "P2": 0.2,
+        "P3": 0.14,
+        "P4": 0.28
+      },
+      "dominance": {
+        "P1": 0.0067,
+        "P2": 0.2,
+        "P3": 0.14,
+        "P4": 0.28
+      },
+      "engagement": {
+        "P1": 0.496,
+        "P2": 0.613,
+        "P3": 0.986,
+        "P4": 0.879
+      },
+      "mutual_gaze": 0.0667,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 550.0,
+      "end": 560.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.2733,
+        "P3": 0.0667,
+        "P4": 0.0867
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.2733,
+        "P3": 0.0667,
+        "P4": 0.0867
+      },
+      "engagement": {
+        "P1": 0.3,
+        "P2": 0.685,
+        "P3": 0.86,
+        "P4": 0.853
+      },
+      "mutual_gaze": 0.0067,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 560.0,
+      "end": 570.0,
+      "attention": {
+        "P1": 0.0333,
+        "P2": 0.04,
+        "P3": 0.6,
+        "P4": 0.0133
+      },
+      "dominance": {
+        "P1": 0.0333,
+        "P2": 0.04,
+        "P3": 0.6,
+        "P4": 0.0133
+      },
+      "engagement": {
+        "P1": 0.548,
+        "P2": 0.324,
+        "P3": 0.524,
+        "P4": 0.944
+      },
+      "mutual_gaze": 0.0133,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 570.0,
+      "end": 580.0,
+      "attention": {
+        "P1": 0.0867,
+        "P2": 0.16,
+        "P3": 0.2733,
+        "P4": 0.1667
+      },
+      "dominance": {
+        "P1": 0.0867,
+        "P2": 0.16,
+        "P3": 0.2733,
+        "P4": 0.1667
+      },
+      "engagement": {
+        "P1": 0.557,
+        "P2": 0.296,
+        "P3": 0.818,
+        "P4": 0.965
+      },
+      "mutual_gaze": 0.0467,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 580.0,
+      "end": 590.0,
+      "attention": {
+        "P1": 0.1933,
+        "P2": 0.1,
+        "P3": 0.2667,
+        "P4": 0.0267
+      },
+      "dominance": {
+        "P1": 0.1933,
+        "P2": 0.1,
+        "P3": 0.2667,
+        "P4": 0.0267
+      },
+      "engagement": {
+        "P1": 0.58,
+        "P2": 0.434,
+        "P3": 0.699,
+        "P4": 0.867
+      },
+      "mutual_gaze": 0.02,
+      "addressee": {
+        "person": "P3",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 590.0,
+      "end": 600.0,
+      "attention": {
+        "P1": 0.02,
+        "P2": 0.1467,
+        "P3": 0.2,
+        "P4": 0.0333
+      },
+      "dominance": {
+        "P1": 0.02,
+        "P2": 0.1467,
+        "P3": 0.2,
+        "P4": 0.0333
+      },
+      "engagement": {
+        "P1": 0.497,
+        "P2": 0.352,
+        "P3": 0.718,
+        "P4": 0.706
+      },
+      "mutual_gaze": 0.0433,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 600.0,
+      "end": 610.0,
+      "attention": {
+        "P1": 0.1467,
+        "P2": 0.0467,
+        "P3": 0.1667,
+        "P4": 0.0267
+      },
+      "dominance": {
+        "P1": 0.1467,
+        "P2": 0.0467,
+        "P3": 0.1667,
+        "P4": 0.0267
+      },
+      "engagement": {
+        "P1": 0.58,
+        "P2": 0.464,
+        "P3": 0.818,
+        "P4": 0.648
+      },
+      "mutual_gaze": 0.01,
+      "addressee": {
+        "person": "P3",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 610.0,
+      "end": 620.0,
+      "attention": {
+        "P1": 0.1223,
+        "P2": 0.1079,
+        "P3": 0.1295,
+        "P4": 0.1133
+      },
+      "dominance": {
+        "P1": 0.1223,
+        "P2": 0.1079,
+        "P3": 0.1295,
+        "P4": 0.1133
+      },
+      "engagement": {
+        "P1": 0.545,
+        "P2": 0.206,
+        "P3": 0.748,
+        "P4": 0.763
+      },
+      "mutual_gaze": 0.0262,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 620.0,
+      "end": 630.0,
+      "attention": {
+        "P1": 0.0467,
+        "P2": 0.0933,
+        "P3": 0.1,
+        "P4": 0.2267
+      },
+      "dominance": {
+        "P1": 0.0467,
+        "P2": 0.0933,
+        "P3": 0.1,
+        "P4": 0.2267
+      },
+      "engagement": {
+        "P1": 0.335,
+        "P2": 0.348,
+        "P3": 0.62,
+        "P4": 0.888
+      },
+      "mutual_gaze": 0.0433,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 630.0,
+      "end": 640.0,
+      "attention": {
+        "P1": 0.0733,
+        "P2": 0.06,
+        "P3": 0.14,
+        "P4": 0.26
+      },
+      "dominance": {
+        "P1": 0.0733,
+        "P2": 0.06,
+        "P3": 0.14,
+        "P4": 0.26
+      },
+      "engagement": {
+        "P1": 0.457,
+        "P2": 0.699,
+        "P3": 0.783,
+        "P4": 0.923
+      },
+      "mutual_gaze": 0.05,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 640.0,
+      "end": 650.0,
+      "attention": {
+        "P1": 0.1533,
+        "P2": 0.1933,
+        "P3": 0.08,
+        "P4": 0.1867
+      },
+      "dominance": {
+        "P1": 0.1533,
+        "P2": 0.1933,
+        "P3": 0.08,
+        "P4": 0.1867
+      },
+      "engagement": {
+        "P1": 0.788,
+        "P2": 0.445,
+        "P3": 0.786,
+        "P4": 0.86
+      },
+      "mutual_gaze": 0.0133,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 650.0,
+      "end": 660.0,
+      "attention": {
+        "P1": 0.0333,
+        "P2": 0.1733,
+        "P3": 0.08,
+        "P4": 0.0733
+      },
+      "dominance": {
+        "P1": 0.0333,
+        "P2": 0.1733,
+        "P3": 0.08,
+        "P4": 0.0733
+      },
+      "engagement": {
+        "P1": 0.699,
+        "P2": 0.564,
+        "P3": 0.506,
+        "P4": 0.662
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 660.0,
+      "end": 670.0,
+      "attention": {
+        "P1": 0.1639,
+        "P2": 0.14,
+        "P3": 0.0,
+        "P4": 0.0588
+      },
+      "dominance": {
+        "P1": 0.1639,
+        "P2": 0.14,
+        "P3": 0.0,
+        "P4": 0.0588
+      },
+      "engagement": {
+        "P1": 0.524,
+        "P2": 0.334,
+        "P3": 0.3065,
+        "P4": 0.6375
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P3",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 670.0,
+      "end": 680.0,
+      "attention": {
+        "P1": 0.02,
+        "P2": 0.05,
+        "P3": 0.07,
+        "P4": 0.04
+      },
+      "dominance": {
+        "P1": 0.02,
+        "P2": 0.05,
+        "P3": 0.07,
+        "P4": 0.04
+      },
+      "engagement": {
+        "P1": 0.332,
+        "P2": 0.2725,
+        "P3": 0.25,
+        "P4": 0.727
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P3",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 680.0,
+      "end": 690.0,
+      "attention": {
+        "P1": 0.0789,
+        "P2": 0.1963,
+        "P3": 0.0756,
+        "P4": 0.0263
+      },
+      "dominance": {
+        "P1": 0.0789,
+        "P2": 0.1963,
+        "P3": 0.0756,
+        "P4": 0.0263
+      },
+      "engagement": {
+        "P1": 0.375,
+        "P2": 0.2625,
+        "P3": 0.334,
+        "P4": 0.825
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 690.0,
+      "end": 700.0,
+      "attention": {
+        "P1": 0.0161,
+        "P2": 0.2685,
+        "P3": 0.0192,
+        "P4": 0.1129
+      },
+      "dominance": {
+        "P1": 0.0161,
+        "P2": 0.2685,
+        "P3": 0.0192,
+        "P4": 0.1129
+      },
+      "engagement": {
+        "P1": 0.664,
+        "P2": 0.2895,
+        "P3": 0.312,
+        "P4": 0.718
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 700.0,
+      "end": 710.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.4345,
+        "P3": 0.0625,
+        "P4": 0.0894
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.4345,
+        "P3": 0.0625,
+        "P4": 0.0894
+      },
+      "engagement": {
+        "P1": 0.762,
+        "P2": 0.29,
+        "P3": 0.5215,
+        "P4": 0.951
+      },
+      "mutual_gaze": 0.0137,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 710.0,
+      "end": 720.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.2333,
+        "P3": 0.0,
+        "P4": 0.02
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.2333,
+        "P3": 0.0,
+        "P4": 0.02
+      },
+      "engagement": {
+        "P1": 0.699,
+        "P2": 0.25,
+        "P3": 0.531,
+        "P4": 0.678
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 720.0,
+      "end": 730.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.5133,
+        "P3": 0.0098,
+        "P4": 0.0588
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.5133,
+        "P3": 0.0098,
+        "P4": 0.0588
+      },
+      "engagement": {
+        "P1": 0.774,
+        "P2": 0.24,
+        "P3": 0.916,
+        "P4": 0.734
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 730.0,
+      "end": 740.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.4,
+        "P3": 0.0,
+        "P4": 0.09
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.4,
+        "P3": 0.0,
+        "P4": 0.09
+      },
+      "engagement": {
+        "P1": 0.718,
+        "P2": 0.25,
+        "P3": 0.825,
+        "P4": 0.741
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 740.0,
+      "end": 750.0,
+      "attention": {
+        "P1": 0.01,
+        "P2": 0.0333,
+        "P3": 0.0,
+        "P4": 0.0
+      },
+      "dominance": {
+        "P1": 0.01,
+        "P2": 0.0333,
+        "P3": 0.0,
+        "P4": 0.0
+      },
+      "engagement": {
+        "P1": 0.335,
+        "P2": 0.25,
+        "P3": 0.361,
+        "P4": 0.664
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 750.0,
+      "end": 760.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.1467,
+        "P3": 0.0,
+        "P4": 0.03
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.1467,
+        "P3": 0.0,
+        "P4": 0.03
+      },
+      "engagement": {
+        "P1": 0.43,
+        "P2": 0.25,
+        "P3": 0.552,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 760.0,
+      "end": 770.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.1467,
+        "P3": 0.0,
+        "P4": 0.19
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.1467,
+        "P3": 0.0,
+        "P4": 0.19
+      },
+      "engagement": {
+        "P1": 0.748,
+        "P2": 0.25,
+        "P3": 0.86,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 770.0,
+      "end": 780.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0933,
+        "P3": 0.03,
+        "P4": 0.24
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0933,
+        "P3": 0.03,
+        "P4": 0.24
+      },
+      "engagement": {
+        "P1": 0.664,
+        "P2": 0.25,
+        "P3": 0.769,
+        "P4": 0.72
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 780.0,
+      "end": 790.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0867,
+        "P3": 0.0,
+        "P4": 0.25
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0867,
+        "P3": 0.0,
+        "P4": 0.25
+      },
+      "engagement": {
+        "P1": 0.678,
+        "P2": 0.25,
+        "P3": 0.839,
+        "P4": 0.664
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 790.0,
+      "end": 800.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.2867,
+        "P3": 0.03,
+        "P4": 0.46
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.2867,
+        "P3": 0.03,
+        "P4": 0.46
+      },
+      "engagement": {
+        "P1": 0.916,
+        "P2": 0.25,
+        "P3": 0.69,
+        "P4": 0.895
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 800.0,
+      "end": 810.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0604,
+        "P3": 0.02,
+        "P4": 0.4343
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0604,
+        "P3": 0.02,
+        "P4": 0.4343
+      },
+      "engagement": {
+        "P1": 0.86,
+        "P2": 0.25,
+        "P3": 0.5505,
+        "P4": 0.692
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 810.0,
+      "end": 820.0,
+      "attention": {
+        "P1": 0.01,
+        "P2": 0.1533,
+        "P3": 0.01,
+        "P4": 0.42
+      },
+      "dominance": {
+        "P1": 0.01,
+        "P2": 0.1533,
+        "P3": 0.01,
+        "P4": 0.42
+      },
+      "engagement": {
+        "P1": 0.874,
+        "P2": 0.2425,
+        "P3": 0.972,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0067,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 820.0,
+      "end": 830.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.2467,
+        "P3": 0.0,
+        "P4": 0.3659
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.2467,
+        "P3": 0.0,
+        "P4": 0.3659
+      },
+      "engagement": {
+        "P1": 0.688,
+        "P2": 0.582,
+        "P3": 0.895,
+        "P4": 0.657
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 830.0,
+      "end": 840.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.4,
+        "P3": 0.0,
+        "P4": 0.1373
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.4,
+        "P3": 0.0,
+        "P4": 0.1373
+      },
+      "engagement": {
+        "P1": 0.779,
+        "P2": 0.3835,
+        "P3": 0.881,
+        "P4": 0.706
+      },
+      "mutual_gaze": 0.0128,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 840.0,
+      "end": 850.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.5133,
+        "P3": 0.0,
+        "P4": 0.2336
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.5133,
+        "P3": 0.0,
+        "P4": 0.2336
+      },
+      "engagement": {
+        "P1": 1.0,
+        "P2": 0.417,
+        "P3": 0.839,
+        "P4": 0.853
+      },
+      "mutual_gaze": 0.0292,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 850.0,
+      "end": 860.0,
+      "attention": {
+        "P1": 0.0364,
+        "P2": 0.2,
+        "P3": 0.0,
+        "P4": 0.2727
+      },
+      "dominance": {
+        "P1": 0.0364,
+        "P2": 0.2,
+        "P3": 0.0,
+        "P4": 0.2727
+      },
+      "engagement": {
+        "P1": 0.972,
+        "P2": 0.49,
+        "P3": 0.986,
+        "P4": 0.741
+      },
+      "mutual_gaze": 0.0222,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 860.0,
+      "end": 870.0,
+      "attention": {
+        "P1": 0.0098,
+        "P2": 0.18,
+        "P3": 0.049,
+        "P4": 0.3725
+      },
+      "dominance": {
+        "P1": 0.0098,
+        "P2": 0.18,
+        "P3": 0.049,
+        "P4": 0.3725
+      },
+      "engagement": {
+        "P1": 0.93,
+        "P2": 0.1875,
+        "P3": 0.951,
+        "P4": 0.734
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 870.0,
+      "end": 880.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.2733,
+        "P3": 0.0,
+        "P4": 0.2157
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.2733,
+        "P3": 0.0,
+        "P4": 0.2157
+      },
+      "engagement": {
+        "P1": 0.769,
+        "P2": 0.219,
+        "P3": 1.0,
+        "P4": 0.664
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 880.0,
+      "end": 890.0,
+      "attention": {
+        "P1": 0.0141,
+        "P2": 0.32,
+        "P3": 0.0282,
+        "P4": 0.2113
+      },
+      "dominance": {
+        "P1": 0.0141,
+        "P2": 0.32,
+        "P3": 0.0282,
+        "P4": 0.2113
+      },
+      "engagement": {
+        "P1": 0.587,
+        "P2": 0.809,
+        "P3": 0.907,
+        "P4": 0.734
+      },
+      "mutual_gaze": 0.0036,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 890.0,
+      "end": 900.0,
+      "attention": {
+        "P1": 0.0267,
+        "P2": 0.2067,
+        "P3": 0.04,
+        "P4": 0.2133
+      },
+      "dominance": {
+        "P1": 0.0267,
+        "P2": 0.2067,
+        "P3": 0.04,
+        "P4": 0.2133
+      },
+      "engagement": {
+        "P1": 0.505,
+        "P2": 0.818,
+        "P3": 0.791,
+        "P4": 0.762
+      },
+      "mutual_gaze": 0.0033,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 900.0,
+      "end": 910.0,
+      "attention": {
+        "P1": 0.0211,
+        "P2": 0.2887,
+        "P3": 0.0068,
+        "P4": 0.2708
+      },
+      "dominance": {
+        "P1": 0.0211,
+        "P2": 0.2887,
+        "P3": 0.0068,
+        "P4": 0.2708
+      },
+      "engagement": {
+        "P1": 0.468,
+        "P2": 0.826,
+        "P3": 0.722,
+        "P4": 0.825
+      },
+      "mutual_gaze": 0.058,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 910.0,
+      "end": 920.0,
+      "attention": {
+        "P1": 0.1319,
+        "P2": 0.6597,
+        "P3": 0.0067,
+        "P4": 0.1528
+      },
+      "dominance": {
+        "P1": 0.1319,
+        "P2": 0.6597,
+        "P3": 0.0067,
+        "P4": 0.1528
+      },
+      "engagement": {
+        "P1": 0.851,
+        "P2": 0.679,
+        "P3": 0.697,
+        "P4": 0.986
+      },
+      "mutual_gaze": 0.0709,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 920.0,
+      "end": 930.0,
+      "attention": {
+        "P1": 0.047,
+        "P2": 0.2953,
+        "P3": 0.04,
+        "P4": 0.2148
+      },
+      "dominance": {
+        "P1": 0.047,
+        "P2": 0.2953,
+        "P3": 0.04,
+        "P4": 0.2148
+      },
+      "engagement": {
+        "P1": 0.748,
+        "P2": 0.698,
+        "P3": 0.8555,
+        "P4": 0.713
+      },
+      "mutual_gaze": 0.0269,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 930.0,
+      "end": 940.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.3733,
+        "P3": 0.0,
+        "P4": 0.2206
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.3733,
+        "P3": 0.0,
+        "P4": 0.2206
+      },
+      "engagement": {
+        "P1": 0.646,
+        "P2": 0.7415,
+        "P3": 1.0,
+        "P4": 0.657
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 940.0,
+      "end": 950.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.2365,
+        "P3": 0.0067,
+        "P4": 0.1757
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.2365,
+        "P3": 0.0067,
+        "P4": 0.1757
+      },
+      "engagement": {
+        "P1": 0.403,
+        "P2": 0.664,
+        "P3": 0.678,
+        "P4": 0.699
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 950.0,
+      "end": 960.0,
+      "attention": {
+        "P1": 0.0208,
+        "P2": 0.2292,
+        "P3": 0.04,
+        "P4": 0.0417
+      },
+      "dominance": {
+        "P1": 0.0208,
+        "P2": 0.2292,
+        "P3": 0.04,
+        "P4": 0.0417
+      },
+      "engagement": {
+        "P1": 0.402,
+        "P2": 0.618,
+        "P3": 0.508,
+        "P4": 0.846
+      },
+      "mutual_gaze": 0.0071,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 960.0,
+      "end": 970.0,
+      "attention": {
+        "P1": 0.0136,
+        "P2": 0.3673,
+        "P3": 0.0267,
+        "P4": 0.2517
+      },
+      "dominance": {
+        "P1": 0.0136,
+        "P2": 0.3673,
+        "P3": 0.0267,
+        "P4": 0.2517
+      },
+      "engagement": {
+        "P1": 0.846,
+        "P2": 0.747,
+        "P3": 0.6165,
+        "P4": 0.804
+      },
+      "mutual_gaze": 0.0275,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 970.0,
+      "end": 980.0,
+      "attention": {
+        "P1": 0.0333,
+        "P2": 0.0733,
+        "P3": 0.0,
+        "P4": 0.1467
+      },
+      "dominance": {
+        "P1": 0.0333,
+        "P2": 0.0733,
+        "P3": 0.0,
+        "P4": 0.1467
+      },
+      "engagement": {
+        "P1": 0.511,
+        "P2": 0.727,
+        "P3": 0.789,
+        "P4": 0.706
+      },
+      "mutual_gaze": 0.0067,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 980.0,
+      "end": 990.0,
+      "attention": {
+        "P1": 0.0133,
+        "P2": 0.4133,
+        "P3": 0.0,
+        "P4": 0.2667
+      },
+      "dominance": {
+        "P1": 0.0133,
+        "P2": 0.4133,
+        "P3": 0.0,
+        "P4": 0.2667
+      },
+      "engagement": {
+        "P1": 0.744,
+        "P2": 0.872,
+        "P3": 0.59,
+        "P4": 0.895
+      },
+      "mutual_gaze": 0.0767,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 990.0,
+      "end": 1000.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.2467,
+        "P3": 0.0067,
+        "P4": 0.28
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.2467,
+        "P3": 0.0067,
+        "P4": 0.28
+      },
+      "engagement": {
+        "P1": 0.888,
+        "P2": 0.734,
+        "P3": 0.942,
+        "P4": 0.853
+      },
+      "mutual_gaze": 0.0167,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 1000.0,
+      "end": 1010.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.3867,
+        "P3": 0.0067,
+        "P4": 0.1933
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.3867,
+        "P3": 0.0067,
+        "P4": 0.1933
+      },
+      "engagement": {
+        "P1": 0.693,
+        "P2": 0.734,
+        "P3": 0.958,
+        "P4": 0.79
+      },
+      "mutual_gaze": 0.04,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 1010.0,
+      "end": 1020.0,
+      "attention": {
+        "P1": 0.0213,
+        "P2": 0.3133,
+        "P3": 0.0638,
+        "P4": 0.1064
+      },
+      "dominance": {
+        "P1": 0.0213,
+        "P2": 0.3133,
+        "P3": 0.0638,
+        "P4": 0.1064
+      },
+      "engagement": {
+        "P1": 0.528,
+        "P2": 0.642,
+        "P3": 0.972,
+        "P4": 0.951
+      },
+      "mutual_gaze": 0.033,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 1020.0,
+      "end": 1030.0,
+      "attention": {
+        "P1": 0.0067,
+        "P2": 0.2467,
+        "P3": 0.0133,
+        "P4": 0.2667
+      },
+      "dominance": {
+        "P1": 0.0067,
+        "P2": 0.2467,
+        "P3": 0.0133,
+        "P4": 0.2667
+      },
+      "engagement": {
+        "P1": 0.389,
+        "P2": 0.797,
+        "P3": 0.846,
+        "P4": 0.909
+      },
+      "mutual_gaze": 0.07,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1030.0,
+      "end": 1040.0,
+      "attention": {
+        "P1": 0.02,
+        "P2": 0.28,
+        "P3": 0.0,
+        "P4": 0.0867
+      },
+      "dominance": {
+        "P1": 0.02,
+        "P2": 0.28,
+        "P3": 0.0,
+        "P4": 0.0867
+      },
+      "engagement": {
+        "P1": 0.626,
+        "P2": 0.727,
+        "P3": 0.944,
+        "P4": 0.748
+      },
+      "mutual_gaze": 0.03,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 1040.0,
+      "end": 1050.0,
+      "attention": {
+        "P1": 0.02,
+        "P2": 0.0667,
+        "P3": 0.02,
+        "P4": 0.0867
+      },
+      "dominance": {
+        "P1": 0.02,
+        "P2": 0.0667,
+        "P3": 0.02,
+        "P4": 0.0867
+      },
+      "engagement": {
+        "P1": 0.587,
+        "P2": 0.557,
+        "P3": 0.627,
+        "P4": 0.678
+      },
+      "mutual_gaze": 0.0033,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 1050.0,
+      "end": 1060.0,
+      "attention": {
+        "P1": 0.0333,
+        "P2": 0.1467,
+        "P3": 0.02,
+        "P4": 0.1667
+      },
+      "dominance": {
+        "P1": 0.0333,
+        "P2": 0.1467,
+        "P3": 0.02,
+        "P4": 0.1667
+      },
+      "engagement": {
+        "P1": 0.671,
+        "P2": 0.711,
+        "P3": 0.433,
+        "P4": 0.748
+      },
+      "mutual_gaze": 0.0267,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 1060.0,
+      "end": 1070.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.2667,
+        "P3": 0.0333,
+        "P4": 0.2083
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.2667,
+        "P3": 0.0333,
+        "P4": 0.2083
+      },
+      "engagement": {
+        "P1": 0.569,
+        "P2": 0.522,
+        "P3": 0.475,
+        "P4": 0.832
+      },
+      "mutual_gaze": 0.0762,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 1070.0,
+      "end": 1080.0,
+      "attention": {
+        "P1": 0.0084,
+        "P2": 0.32,
+        "P3": 0.0756,
+        "P4": 0.1092
+      },
+      "dominance": {
+        "P1": 0.0084,
+        "P2": 0.32,
+        "P3": 0.0756,
+        "P4": 0.1092
+      },
+      "engagement": {
+        "P1": 0.713,
+        "P2": 0.335,
+        "P3": 0.538,
+        "P4": 0.902
+      },
+      "mutual_gaze": 0.0145,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1080.0,
+      "end": 1090.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.58,
+        "P3": 0.0098,
+        "P4": 0.049
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.58,
+        "P3": 0.0098,
+        "P4": 0.049
+      },
+      "engagement": {
+        "P1": 0.923,
+        "P2": 0.24,
+        "P3": 0.51,
+        "P4": 0.965
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1090.0,
+      "end": 1100.0,
+      "attention": {
+        "P1": 0.0097,
+        "P2": 0.2133,
+        "P3": 0.0583,
+        "P4": 0.1359
+      },
+      "dominance": {
+        "P1": 0.0097,
+        "P2": 0.2133,
+        "P3": 0.0583,
+        "P4": 0.1359
+      },
+      "engagement": {
+        "P1": 0.755,
+        "P2": 0.255,
+        "P3": 0.748,
+        "P4": 0.725
+      },
+      "mutual_gaze": 0.0063,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1100.0,
+      "end": 1110.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.14,
+        "P3": 0.03,
+        "P4": 0.15
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.14,
+        "P3": 0.03,
+        "P4": 0.15
+      },
+      "engagement": {
+        "P1": 0.464,
+        "P2": 0.25,
+        "P3": 0.524,
+        "P4": 0.797
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1110.0,
+      "end": 1120.0,
+      "attention": {
+        "P1": 0.02,
+        "P2": 0.22,
+        "P3": 0.09,
+        "P4": 0.18
+      },
+      "dominance": {
+        "P1": 0.02,
+        "P2": 0.22,
+        "P3": 0.09,
+        "P4": 0.18
+      },
+      "engagement": {
+        "P1": 0.615,
+        "P2": 0.25,
+        "P3": 0.557,
+        "P4": 0.832
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1120.0,
+      "end": 1130.0,
+      "attention": {
+        "P1": 0.04,
+        "P2": 0.3267,
+        "P3": 0.22,
+        "P4": 0.17
+      },
+      "dominance": {
+        "P1": 0.04,
+        "P2": 0.3267,
+        "P3": 0.22,
+        "P4": 0.17
+      },
+      "engagement": {
+        "P1": 0.804,
+        "P2": 0.25,
+        "P3": 0.406,
+        "P4": 0.884
+      },
+      "mutual_gaze": 0.0467,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1130.0,
+      "end": 1140.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.2867,
+        "P3": 0.0962,
+        "P4": 0.2404
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.2867,
+        "P3": 0.0962,
+        "P4": 0.2404
+      },
+      "engagement": {
+        "P1": 0.704,
+        "P2": 0.3005,
+        "P3": 0.552,
+        "P4": 0.881
+      },
+      "mutual_gaze": 0.0247,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1140.0,
+      "end": 1150.0,
+      "attention": {
+        "P1": 0.26,
+        "P2": 0.0867,
+        "P3": 0.2,
+        "P4": 0.05
+      },
+      "dominance": {
+        "P1": 0.26,
+        "P2": 0.0867,
+        "P3": 0.2,
+        "P4": 0.05
+      },
+      "engagement": {
+        "P1": 0.811,
+        "P2": 0.25,
+        "P3": 0.456,
+        "P4": 0.649
+      },
+      "mutual_gaze": 0.0533,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1150.0,
+      "end": 1160.0,
+      "attention": {
+        "P1": 0.46,
+        "P2": 0.06,
+        "P3": 0.17,
+        "P4": 0.28
+      },
+      "dominance": {
+        "P1": 0.46,
+        "P2": 0.06,
+        "P3": 0.17,
+        "P4": 0.28
+      },
+      "engagement": {
+        "P1": 0.811,
+        "P2": 0.25,
+        "P3": 0.581,
+        "P4": 0.645
+      },
+      "mutual_gaze": 0.1067,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1160.0,
+      "end": 1170.0,
+      "attention": {
+        "P1": 0.05,
+        "P2": 0.2933,
+        "P3": 0.16,
+        "P4": 0.13
+      },
+      "dominance": {
+        "P1": 0.05,
+        "P2": 0.2933,
+        "P3": 0.16,
+        "P4": 0.13
+      },
+      "engagement": {
+        "P1": 0.844,
+        "P2": 0.25,
+        "P3": 0.884,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0267,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1170.0,
+      "end": 1180.0,
+      "attention": {
+        "P1": 0.2241,
+        "P2": 0.0867,
+        "P3": 0.1983,
+        "P4": 0.181
+      },
+      "dominance": {
+        "P1": 0.2241,
+        "P2": 0.0867,
+        "P3": 0.1983,
+        "P4": 0.181
+      },
+      "engagement": {
+        "P1": 0.774,
+        "P2": 0.418,
+        "P3": 0.559,
+        "P4": 0.751
+      },
+      "mutual_gaze": 0.0455,
+      "addressee": {
+        "person": "P1",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 1180.0,
+      "end": 1190.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.08,
+        "P3": 0.0,
+        "P4": 0.0268
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.08,
+        "P3": 0.0,
+        "P4": 0.0268
+      },
+      "engagement": {
+        "P1": 0.503,
+        "P2": 0.559,
+        "P3": 0.717,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 1190.0,
+      "end": 1200.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0933,
+        "P3": 0.0261,
+        "P4": 0.0609
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0933,
+        "P3": 0.0261,
+        "P4": 0.0609
+      },
+      "engagement": {
+        "P1": 0.629,
+        "P2": 0.495,
+        "P3": 0.515,
+        "P4": 0.713
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 1200.0,
+      "end": 1210.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0133,
+        "P3": 0.04,
+        "P4": 0.09
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0133,
+        "P3": 0.04,
+        "P4": 0.09
+      },
+      "engagement": {
+        "P1": 0.601,
+        "P2": 0.25,
+        "P3": 0.66,
+        "P4": 0.678
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1210.0,
+      "end": 1220.0,
+      "attention": {
+        "P1": 0.0093,
+        "P2": 0.14,
+        "P3": 0.5888,
+        "P4": 0.0748
+      },
+      "dominance": {
+        "P1": 0.0093,
+        "P2": 0.14,
+        "P3": 0.5888,
+        "P4": 0.0748
+      },
+      "engagement": {
+        "P1": 0.923,
+        "P2": 0.335,
+        "P3": 0.559,
+        "P4": 0.944
+      },
+      "mutual_gaze": 0.0409,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1220.0,
+      "end": 1230.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.34,
+        "P3": 0.1102,
+        "P4": 0.2283
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.34,
+        "P3": 0.1102,
+        "P4": 0.2283
+      },
+      "engagement": {
+        "P1": 0.804,
+        "P2": 0.495,
+        "P3": 0.825,
+        "P4": 0.93
+      },
+      "mutual_gaze": 0.026,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 1230.0,
+      "end": 1240.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.1267,
+        "P3": 0.0,
+        "P4": 0.1415
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.1267,
+        "P3": 0.0,
+        "P4": 0.1415
+      },
+      "engagement": {
+        "P1": 0.552,
+        "P2": 0.332,
+        "P3": 0.87,
+        "P4": 0.706
+      },
+      "mutual_gaze": 0.0179,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1240.0,
+      "end": 1250.0,
+      "attention": {
+        "P1": 0.02,
+        "P2": 0.2267,
+        "P3": 0.02,
+        "P4": 0.13
+      },
+      "dominance": {
+        "P1": 0.02,
+        "P2": 0.2267,
+        "P3": 0.02,
+        "P4": 0.13
+      },
+      "engagement": {
+        "P1": 0.594,
+        "P2": 0.25,
+        "P3": 0.937,
+        "P4": 0.783
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1250.0,
+      "end": 1260.0,
+      "attention": {
+        "P1": 0.12,
+        "P2": 0.1667,
+        "P3": 0.05,
+        "P4": 0.16
+      },
+      "dominance": {
+        "P1": 0.12,
+        "P2": 0.1667,
+        "P3": 0.05,
+        "P4": 0.16
+      },
+      "engagement": {
+        "P1": 0.79,
+        "P2": 0.25,
+        "P3": 0.826,
+        "P4": 0.772
+      },
+      "mutual_gaze": 0.02,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1260.0,
+      "end": 1270.0,
+      "attention": {
+        "P1": 0.2773,
+        "P2": 0.12,
+        "P3": 0.084,
+        "P4": 0.3109
+      },
+      "dominance": {
+        "P1": 0.2773,
+        "P2": 0.12,
+        "P3": 0.084,
+        "P4": 0.3109
+      },
+      "engagement": {
+        "P1": 0.769,
+        "P2": 0.475,
+        "P3": 0.645,
+        "P4": 0.712
+      },
+      "mutual_gaze": 0.0386,
+      "addressee": {
+        "person": "P4",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 1270.0,
+      "end": 1280.0,
+      "attention": {
+        "P1": 0.3193,
+        "P2": 0.16,
+        "P3": 0.1429,
+        "P4": 0.3109
+      },
+      "dominance": {
+        "P1": 0.3193,
+        "P2": 0.16,
+        "P3": 0.1429,
+        "P4": 0.3109
+      },
+      "engagement": {
+        "P1": 0.902,
+        "P2": 0.515,
+        "P3": 0.705,
+        "P4": 0.701
+      },
+      "mutual_gaze": 0.0338,
+      "addressee": {
+        "person": "P1",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 1280.0,
+      "end": 1290.0,
+      "attention": {
+        "P1": 0.2773,
+        "P2": 0.1733,
+        "P3": 0.2773,
+        "P4": 0.2773
+      },
+      "dominance": {
+        "P1": 0.2773,
+        "P2": 0.1733,
+        "P3": 0.2773,
+        "P4": 0.2773
+      },
+      "engagement": {
+        "P1": 0.832,
+        "P2": 0.435,
+        "P3": 0.738,
+        "P4": 0.699
+      },
+      "mutual_gaze": 0.0097,
+      "addressee": {
+        "person": "P1",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 1290.0,
+      "end": 1300.0,
+      "attention": {
+        "P1": 0.3,
+        "P2": 0.0933,
+        "P3": 0.32,
+        "P4": 0.16
+      },
+      "dominance": {
+        "P1": 0.3,
+        "P2": 0.0933,
+        "P3": 0.32,
+        "P4": 0.16
+      },
+      "engagement": {
+        "P1": 0.634,
+        "P2": 0.25,
+        "P3": 0.791,
+        "P4": 0.752
+      },
+      "mutual_gaze": 0.0333,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1300.0,
+      "end": 1310.0,
+      "attention": {
+        "P1": 0.0092,
+        "P2": 0.14,
+        "P3": 0.1101,
+        "P4": 0.2385
+      },
+      "dominance": {
+        "P1": 0.0092,
+        "P2": 0.14,
+        "P3": 0.1101,
+        "P4": 0.2385
+      },
+      "engagement": {
+        "P1": 0.58,
+        "P2": 0.365,
+        "P3": 0.675,
+        "P4": 0.762
+      },
+      "mutual_gaze": 0.0056,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1310.0,
+      "end": 1320.0,
+      "attention": {
+        "P1": 0.2837,
+        "P2": 0.1933,
+        "P3": 0.0922,
+        "P4": 0.078
+      },
+      "dominance": {
+        "P1": 0.2837,
+        "P2": 0.1933,
+        "P3": 0.0922,
+        "P4": 0.078
+      },
+      "engagement": {
+        "P1": 0.879,
+        "P2": 0.185,
+        "P3": 0.553,
+        "P4": 0.672
+      },
+      "mutual_gaze": 0.022,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1320.0,
+      "end": 1330.0,
+      "attention": {
+        "P1": 0.3333,
+        "P2": 0.4,
+        "P3": 0.0081,
+        "P4": 0.1301
+      },
+      "dominance": {
+        "P1": 0.3333,
+        "P2": 0.4,
+        "P3": 0.0081,
+        "P4": 0.1301
+      },
+      "engagement": {
+        "P1": 0.916,
+        "P2": 0.455,
+        "P3": 0.533,
+        "P4": 0.729
+      },
+      "mutual_gaze": 0.0228,
+      "addressee": {
+        "person": "P2",
+        "reason": "address dominant"
+      }
+    },
+    {
+      "start": 1330.0,
+      "end": 1340.0,
+      "attention": {
+        "P1": 0.6147,
+        "P2": 0.2733,
+        "P3": 0.055,
+        "P4": 0.1193
+      },
+      "dominance": {
+        "P1": 0.6147,
+        "P2": 0.2733,
+        "P3": 0.055,
+        "P4": 0.1193
+      },
+      "engagement": {
+        "P1": 0.93,
+        "P2": 0.345,
+        "P3": 0.616,
+        "P4": 0.694
+      },
+      "mutual_gaze": 0.0282,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1340.0,
+      "end": 1350.0,
+      "attention": {
+        "P1": 0.3333,
+        "P2": 0.2533,
+        "P3": 0.0,
+        "P4": 0.0381
+      },
+      "dominance": {
+        "P1": 0.3333,
+        "P2": 0.2533,
+        "P3": 0.0,
+        "P4": 0.0381
+      },
+      "engagement": {
+        "P1": 0.86,
+        "P2": 0.275,
+        "P3": 0.581,
+        "P4": 0.643
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1350.0,
+      "end": 1360.0,
+      "attention": {
+        "P1": 0.31,
+        "P2": 0.0878,
+        "P3": 0.2755,
+        "P4": 0.2245
+      },
+      "dominance": {
+        "P1": 0.31,
+        "P2": 0.0878,
+        "P3": 0.2755,
+        "P4": 0.2245
+      },
+      "engagement": {
+        "P1": 0.69,
+        "P2": 0.25,
+        "P3": 0.499,
+        "P4": 0.687
+      },
+      "mutual_gaze": 0.0685,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1360.0,
+      "end": 1370.0,
+      "attention": {
+        "P1": 0.0168,
+        "P2": 0.1074,
+        "P3": 0.0667,
+        "P4": 0.2444
+      },
+      "dominance": {
+        "P1": 0.0168,
+        "P2": 0.1074,
+        "P3": 0.0667,
+        "P4": 0.2444
+      },
+      "engagement": {
+        "P1": 0.4025,
+        "P2": 0.365,
+        "P3": 0.62,
+        "P4": 0.797
+      },
+      "mutual_gaze": 0.0414,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1370.0,
+      "end": 1380.0,
+      "attention": {
+        "P1": 0.01,
+        "P2": 0.28,
+        "P3": 0.12,
+        "P4": 0.26
+      },
+      "dominance": {
+        "P1": 0.01,
+        "P2": 0.28,
+        "P3": 0.12,
+        "P4": 0.26
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.25,
+        "P3": 0.678,
+        "P4": 0.832
+      },
+      "mutual_gaze": 0.08,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1380.0,
+      "end": 1390.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.21,
+        "P3": 0.0,
+        "P4": 0.0625
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.21,
+        "P3": 0.0,
+        "P4": 0.0625
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.381,
+        "P3": 0.475,
+        "P4": 0.79
+      },
+      "mutual_gaze": 0.0091,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1390.0,
+      "end": 1400.0,
+      "attention": {
+        "P1": 0.0667,
+        "P2": 0.0,
+        "P3": 0.1,
+        "P4": 0.12
+      },
+      "dominance": {
+        "P1": 0.0667,
+        "P2": 0.0,
+        "P3": 0.1,
+        "P4": 0.12
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.629,
+        "P3": 0.527,
+        "P4": 0.783
+      },
+      "mutual_gaze": 0.0067,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1400.0,
+      "end": 1410.0,
+      "attention": {
+        "P1": 0.02,
+        "P2": 0.07,
+        "P3": 0.65,
+        "P4": 0.11
+      },
+      "dominance": {
+        "P1": 0.02,
+        "P2": 0.07,
+        "P3": 0.65,
+        "P4": 0.11
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.673,
+        "P3": 0.569,
+        "P4": 0.965
+      },
+      "mutual_gaze": 0.0667,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1410.0,
+      "end": 1420.0,
+      "attention": {
+        "P1": 0.02,
+        "P2": 0.11,
+        "P3": 0.39,
+        "P4": 0.25
+      },
+      "dominance": {
+        "P1": 0.02,
+        "P2": 0.11,
+        "P3": 0.39,
+        "P4": 0.25
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.728,
+        "P3": 0.461,
+        "P4": 0.865
+      },
+      "mutual_gaze": 0.0667,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1420.0,
+      "end": 1430.0,
+      "attention": {
+        "P1": 0.0204,
+        "P2": 0.3505,
+        "P3": 0.0,
+        "P4": 0.2
+      },
+      "dominance": {
+        "P1": 0.0204,
+        "P2": 0.3505,
+        "P3": 0.0,
+        "P4": 0.2
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.734,
+        "P3": 0.951,
+        "P4": 0.658
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1430.0,
+      "end": 1440.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.23,
+        "P3": 0.0,
+        "P4": 0.26
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.23,
+        "P3": 0.0,
+        "P4": 0.26
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.874,
+        "P3": 0.916,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1440.0,
+      "end": 1450.0,
+      "attention": {
+        "P1": 0.0067,
+        "P2": 0.02,
+        "P3": 0.0,
+        "P4": 0.18
+      },
+      "dominance": {
+        "P1": 0.0067,
+        "P2": 0.02,
+        "P3": 0.0,
+        "P4": 0.18
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.741,
+        "P3": 0.412,
+        "P4": 0.627
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1450.0,
+      "end": 1460.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.01,
+        "P3": 0.0,
+        "P4": 0.24
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.01,
+        "P3": 0.0,
+        "P4": 0.24
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.944,
+        "P3": 0.377,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1460.0,
+      "end": 1470.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.04,
+        "P3": 0.0,
+        "P4": 0.24
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.04,
+        "P3": 0.0,
+        "P4": 0.24
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.944,
+        "P3": 0.916,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1470.0,
+      "end": 1480.0,
+      "attention": {
+        "P1": 0.0133,
+        "P2": 0.04,
+        "P3": 0.0,
+        "P4": 0.38
+      },
+      "dominance": {
+        "P1": 0.0133,
+        "P2": 0.04,
+        "P3": 0.0,
+        "P4": 0.38
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.923,
+        "P3": 0.86,
+        "P4": 0.622
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1480.0,
+      "end": 1490.0,
+      "attention": {
+        "P1": 0.04,
+        "P2": 0.29,
+        "P3": 0.01,
+        "P4": 0.3
+      },
+      "dominance": {
+        "P1": 0.04,
+        "P2": 0.29,
+        "P3": 0.01,
+        "P4": 0.3
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.888,
+        "P3": 1.0,
+        "P4": 0.657
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1490.0,
+      "end": 1500.0,
+      "attention": {
+        "P1": 0.0067,
+        "P2": 0.11,
+        "P3": 0.0,
+        "P4": 0.11
+      },
+      "dominance": {
+        "P1": 0.0067,
+        "P2": 0.11,
+        "P3": 0.0,
+        "P4": 0.11
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.72,
+        "P3": 1.0,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1500.0,
+      "end": 1510.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.41,
+        "P3": 0.0,
+        "P4": 0.04
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.41,
+        "P3": 0.0,
+        "P4": 0.04
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.65,
+        "P3": 0.93,
+        "P4": 0.944
+      },
+      "mutual_gaze": 0.0133,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1510.0,
+      "end": 1520.0,
+      "attention": {
+        "P1": 0.0133,
+        "P2": 0.11,
+        "P3": 0.0,
+        "P4": 0.25
+      },
+      "dominance": {
+        "P1": 0.0133,
+        "P2": 0.11,
+        "P3": 0.0,
+        "P4": 0.25
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.972,
+        "P3": 0.72,
+        "P4": 0.741
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1520.0,
+      "end": 1530.0,
+      "attention": {
+        "P1": 0.0267,
+        "P2": 0.02,
+        "P3": 0.0,
+        "P4": 0.22
+      },
+      "dominance": {
+        "P1": 0.0267,
+        "P2": 0.02,
+        "P3": 0.0,
+        "P4": 0.22
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.93,
+        "P3": 0.776,
+        "P4": 0.664
+      },
+      "mutual_gaze": 0.0133,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1530.0,
+      "end": 1540.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.01,
+        "P3": 0.0,
+        "P4": 0.22
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.01,
+        "P3": 0.0,
+        "P4": 0.22
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.958,
+        "P3": 0.734,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1540.0,
+      "end": 1550.0,
+      "attention": {
+        "P1": 0.02,
+        "P2": 0.05,
+        "P3": 0.07,
+        "P4": 0.38
+      },
+      "dominance": {
+        "P1": 0.02,
+        "P2": 0.05,
+        "P3": 0.07,
+        "P4": 0.38
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.937,
+        "P3": 0.706,
+        "P4": 0.727
+      },
+      "mutual_gaze": 0.0267,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1550.0,
+      "end": 1560.0,
+      "attention": {
+        "P1": 0.0405,
+        "P2": 0.0204,
+        "P3": 0.0,
+        "P4": 0.36
+      },
+      "dominance": {
+        "P1": 0.0405,
+        "P2": 0.0204,
+        "P3": 0.0,
+        "P4": 0.36
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.86,
+        "P3": 0.741,
+        "P4": 0.643
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1560.0,
+      "end": 1570.0,
+      "attention": {
+        "P1": 0.0533,
+        "P2": 0.17,
+        "P3": 0.0,
+        "P4": 0.32
+      },
+      "dominance": {
+        "P1": 0.0533,
+        "P2": 0.17,
+        "P3": 0.0,
+        "P4": 0.32
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.916,
+        "P3": 0.776,
+        "P4": 0.711
+      },
+      "mutual_gaze": 0.04,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1570.0,
+      "end": 1580.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.01,
+        "P3": 0.0,
+        "P4": 0.23
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.01,
+        "P3": 0.0,
+        "P4": 0.23
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.734,
+        "P3": 0.629,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1580.0,
+      "end": 1590.0,
+      "attention": {
+        "P1": 0.0067,
+        "P2": 0.03,
+        "P3": 0.0,
+        "P4": 0.14
+      },
+      "dominance": {
+        "P1": 0.0067,
+        "P2": 0.03,
+        "P3": 0.0,
+        "P4": 0.14
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.748,
+        "P3": 0.839,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1590.0,
+      "end": 1600.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.22,
+        "P3": 0.0,
+        "P4": 0.33
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.22,
+        "P3": 0.0,
+        "P4": 0.33
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.839,
+        "P3": 0.727,
+        "P4": 0.776
+      },
+      "mutual_gaze": 0.0667,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1600.0,
+      "end": 1610.0,
+      "attention": {
+        "P1": 0.0533,
+        "P2": 0.06,
+        "P3": 0.0,
+        "P4": 0.25
+      },
+      "dominance": {
+        "P1": 0.0533,
+        "P2": 0.06,
+        "P3": 0.0,
+        "P4": 0.25
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.832,
+        "P3": 1.0,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1610.0,
+      "end": 1620.0,
+      "attention": {
+        "P1": 0.0067,
+        "P2": 0.24,
+        "P3": 0.0,
+        "P4": 0.24
+      },
+      "dominance": {
+        "P1": 0.0067,
+        "P2": 0.24,
+        "P3": 0.0,
+        "P4": 0.24
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.72,
+        "P3": 0.769,
+        "P4": 0.776
+      },
+      "mutual_gaze": 0.0467,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1620.0,
+      "end": 1630.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.08,
+        "P3": 0.0,
+        "P4": 0.25
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.08,
+        "P3": 0.0,
+        "P4": 0.25
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.636,
+        "P3": 0.461,
+        "P4": 0.678
+      },
+      "mutual_gaze": 0.02,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1630.0,
+      "end": 1640.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.11,
+        "P3": 0.0,
+        "P4": 0.53
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.11,
+        "P3": 0.0,
+        "P4": 0.53
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.909,
+        "P3": 0.545,
+        "P4": 0.727
+      },
+      "mutual_gaze": 0.0533,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1640.0,
+      "end": 1650.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.01,
+        "P3": 0.0,
+        "P4": 0.28
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.01,
+        "P3": 0.0,
+        "P4": 0.28
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.895,
+        "P3": 0.321,
+        "P4": 0.643
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1650.0,
+      "end": 1660.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.14,
+        "P3": 0.0,
+        "P4": 0.16
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.14,
+        "P3": 0.0,
+        "P4": 0.16
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 1.0,
+        "P3": 0.818,
+        "P4": 0.65
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1660.0,
+      "end": 1670.0,
+      "attention": {
+        "P1": 0.0067,
+        "P2": 0.31,
+        "P3": 0.0,
+        "P4": 0.11
+      },
+      "dominance": {
+        "P1": 0.0067,
+        "P2": 0.31,
+        "P3": 0.0,
+        "P4": 0.11
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.601,
+        "P3": 0.888,
+        "P4": 0.706
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1670.0,
+      "end": 1680.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.04,
+        "P3": 0.0,
+        "P4": 0.23
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.04,
+        "P3": 0.0,
+        "P4": 0.23
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.713,
+        "P3": 0.65,
+        "P4": 0.671
+      },
+      "mutual_gaze": 0.0067,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1680.0,
+      "end": 1690.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.28,
+        "P3": 0.0,
+        "P4": 0.46
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.28,
+        "P3": 0.0,
+        "P4": 0.46
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.678,
+        "P3": 0.769,
+        "P4": 0.818
+      },
+      "mutual_gaze": 0.1533,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1690.0,
+      "end": 1700.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.09,
+        "P3": 0.0,
+        "P4": 0.78
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.09,
+        "P3": 0.0,
+        "P4": 0.78
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.958,
+        "P3": 0.839,
+        "P4": 0.685
+      },
+      "mutual_gaze": 0.04,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1700.0,
+      "end": 1710.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.22,
+        "P3": 0.0,
+        "P4": 0.51
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.22,
+        "P3": 0.0,
+        "P4": 0.51
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.867,
+        "P3": 0.72,
+        "P4": 0.713
+      },
+      "mutual_gaze": 0.06,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1710.0,
+      "end": 1720.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.44,
+        "P3": 0.0,
+        "P4": 0.16
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.44,
+        "P3": 0.0,
+        "P4": 0.16
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.398,
+        "P3": 0.692,
+        "P4": 0.916
+      },
+      "mutual_gaze": 0.02,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1720.0,
+      "end": 1730.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.41,
+        "P3": 0.0,
+        "P4": 0.14
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.41,
+        "P3": 0.0,
+        "P4": 0.14
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.461,
+        "P3": 0.468,
+        "P4": 0.895
+      },
+      "mutual_gaze": 0.04,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1730.0,
+      "end": 1740.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.36,
+        "P3": 0.0,
+        "P4": 0.08
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.36,
+        "P3": 0.0,
+        "P4": 0.08
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.349,
+        "P3": 0.482,
+        "P4": 0.888
+      },
+      "mutual_gaze": 0.0133,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1740.0,
+      "end": 1750.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.23,
+        "P3": 0.01,
+        "P4": 0.12
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.23,
+        "P3": 0.01,
+        "P4": 0.12
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.482,
+        "P3": 0.566,
+        "P4": 0.783
+      },
+      "mutual_gaze": 0.0333,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1750.0,
+      "end": 1760.0,
+      "attention": {
+        "P1": 0.0067,
+        "P2": 0.53,
+        "P3": 0.0,
+        "P4": 0.24
+      },
+      "dominance": {
+        "P1": 0.0067,
+        "P2": 0.53,
+        "P3": 0.0,
+        "P4": 0.24
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.895,
+        "P3": 0.643,
+        "P4": 0.993
+      },
+      "mutual_gaze": 0.1067,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1760.0,
+      "end": 1770.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.43,
+        "P3": 0.0,
+        "P4": 0.21
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.43,
+        "P3": 0.0,
+        "P4": 0.21
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.923,
+        "P3": 0.552,
+        "P4": 0.923
+      },
+      "mutual_gaze": 0.0867,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1770.0,
+      "end": 1780.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.3,
+        "P3": 0.02,
+        "P4": 0.51
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.3,
+        "P3": 0.02,
+        "P4": 0.51
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.951,
+        "P3": 0.669,
+        "P4": 0.874
+      },
+      "mutual_gaze": 0.16,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1780.0,
+      "end": 1790.0,
+      "attention": {
+        "P1": 0.0067,
+        "P2": 0.29,
+        "P3": 0.0,
+        "P4": 0.4
+      },
+      "dominance": {
+        "P1": 0.0067,
+        "P2": 0.29,
+        "P3": 0.0,
+        "P4": 0.4
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.916,
+        "P3": 0.533,
+        "P4": 0.853
+      },
+      "mutual_gaze": 0.1333,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1790.0,
+      "end": 1800.0,
+      "attention": {
+        "P1": 0.0867,
+        "P2": 0.01,
+        "P3": 0.0,
+        "P4": 0.38
+      },
+      "dominance": {
+        "P1": 0.0867,
+        "P2": 0.01,
+        "P3": 0.0,
+        "P4": 0.38
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.769,
+        "P3": 0.937,
+        "P4": 0.657
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1800.0,
+      "end": 1810.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.04,
+        "P3": 0.0,
+        "P4": 0.13
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.04,
+        "P3": 0.0,
+        "P4": 0.13
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.643,
+        "P3": 0.559,
+        "P4": 0.636
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1810.0,
+      "end": 1820.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.4,
+        "P3": 0.0,
+        "P4": 0.13
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.4,
+        "P3": 0.0,
+        "P4": 0.13
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.636,
+        "P3": 0.531,
+        "P4": 0.923
+      },
+      "mutual_gaze": 0.0133,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1820.0,
+      "end": 1830.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.09,
+        "P3": 0.0,
+        "P4": 0.18
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.09,
+        "P3": 0.0,
+        "P4": 0.18
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.699,
+        "P3": 0.56,
+        "P4": 0.706
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1830.0,
+      "end": 1840.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.1,
+        "P3": 0.01,
+        "P4": 0.51
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.1,
+        "P3": 0.01,
+        "P4": 0.51
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.972,
+        "P3": 0.401,
+        "P4": 0.713
+      },
+      "mutual_gaze": 0.0533,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1840.0,
+      "end": 1850.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.18,
+        "P3": 0.02,
+        "P4": 0.17
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.18,
+        "P3": 0.02,
+        "P4": 0.17
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.748,
+        "P3": 0.606,
+        "P4": 0.692
+      },
+      "mutual_gaze": 0.0133,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1850.0,
+      "end": 1860.0,
+      "attention": {
+        "P1": 0.0544,
+        "P2": 0.1237,
+        "P3": 0.09,
+        "P4": 0.1443
+      },
+      "dominance": {
+        "P1": 0.0544,
+        "P2": 0.1237,
+        "P3": 0.09,
+        "P4": 0.1443
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.72,
+        "P3": 0.5595,
+        "P4": 0.748
+      },
+      "mutual_gaze": 0.0139,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1860.0,
+      "end": 1870.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.02,
+        "P3": 0.3,
+        "P4": 0.12
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.02,
+        "P3": 0.3,
+        "P4": 0.12
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.692,
+        "P3": 0.482,
+        "P4": 0.839
+      },
+      "mutual_gaze": 0.02,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1870.0,
+      "end": 1880.0,
+      "attention": {
+        "P1": 0.0207,
+        "P2": 0.0632,
+        "P3": 0.1263,
+        "P4": 0.02
+      },
+      "dominance": {
+        "P1": 0.0207,
+        "P2": 0.0632,
+        "P3": 0.1263,
+        "P4": 0.02
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.653,
+        "P3": 0.549,
+        "P4": 0.631
+      },
+      "mutual_gaze": 0.0214,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1880.0,
+      "end": 1890.0,
+      "attention": {
+        "P1": 0.08,
+        "P2": 0.08,
+        "P3": 0.62,
+        "P4": 0.09
+      },
+      "dominance": {
+        "P1": 0.08,
+        "P2": 0.08,
+        "P3": 0.62,
+        "P4": 0.09
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.725,
+        "P3": 0.531,
+        "P4": 0.2425
+      },
+      "mutual_gaze": 0.02,
+      "addressee": {
+        "person": "P4",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1890.0,
+      "end": 1900.0,
+      "attention": {
+        "P1": 0.0467,
+        "P2": 0.5263,
+        "P3": 0.1404,
+        "P4": 0.15
+      },
+      "dominance": {
+        "P1": 0.0467,
+        "P2": 0.5263,
+        "P3": 0.1404,
+        "P4": 0.15
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.635,
+        "P3": 0.804,
+        "P4": 0.3
+      },
+      "mutual_gaze": 0.0625,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1900.0,
+      "end": 1910.0,
+      "attention": {
+        "P1": 0.0867,
+        "P2": 0.4,
+        "P3": 0.08,
+        "P4": 0.12
+      },
+      "dominance": {
+        "P1": 0.0867,
+        "P2": 0.4,
+        "P3": 0.08,
+        "P4": 0.12
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.611,
+        "P3": 0.888,
+        "P4": 0.727
+      },
+      "mutual_gaze": 0.0267,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1910.0,
+      "end": 1920.0,
+      "attention": {
+        "P1": 0.02,
+        "P2": 0.47,
+        "P3": 0.23,
+        "P4": 0.24
+      },
+      "dominance": {
+        "P1": 0.02,
+        "P2": 0.47,
+        "P3": 0.23,
+        "P4": 0.24
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.718,
+        "P3": 0.825,
+        "P4": 0.921
+      },
+      "mutual_gaze": 0.06,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1920.0,
+      "end": 1930.0,
+      "attention": {
+        "P1": 0.113,
+        "P2": 0.6,
+        "P3": 0.0,
+        "P4": 0.0769
+      },
+      "dominance": {
+        "P1": 0.113,
+        "P2": 0.6,
+        "P3": 0.0,
+        "P4": 0.0769
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.573,
+        "P3": 0.4245,
+        "P4": 0.951
+      },
+      "mutual_gaze": 0.0375,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1930.0,
+      "end": 1940.0,
+      "attention": {
+        "P1": 0.1223,
+        "P2": 0.1124,
+        "P3": 0.0,
+        "P4": 0.0562
+      },
+      "dominance": {
+        "P1": 0.1223,
+        "P2": 0.1124,
+        "P3": 0.0,
+        "P4": 0.0562
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.65,
+        "P3": 0.5345,
+        "P4": 0.713
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1940.0,
+      "end": 1950.0,
+      "attention": {
+        "P1": 0.0541,
+        "P2": 0.1939,
+        "P3": 0.0,
+        "P4": 0.0204
+      },
+      "dominance": {
+        "P1": 0.0541,
+        "P2": 0.1939,
+        "P3": 0.0,
+        "P4": 0.0204
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.65,
+        "P3": 0.623,
+        "P4": 0.776
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1950.0,
+      "end": 1960.0,
+      "attention": {
+        "P1": 0.0403,
+        "P2": 0.202,
+        "P3": 0.02,
+        "P4": 0.0404
+      },
+      "dominance": {
+        "P1": 0.0403,
+        "P2": 0.202,
+        "P3": 0.02,
+        "P4": 0.0404
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.741,
+        "P3": 0.4295,
+        "P4": 0.804
+      },
+      "mutual_gaze": 0.0068,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1960.0,
+      "end": 1970.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.19,
+        "P3": 0.01,
+        "P4": 0.21
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.19,
+        "P3": 0.01,
+        "P4": 0.21
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.776,
+        "P3": 0.609,
+        "P4": 0.79
+      },
+      "mutual_gaze": 0.0267,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1970.0,
+      "end": 1980.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.11,
+        "P3": 0.04,
+        "P4": 0.42
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.11,
+        "P3": 0.04,
+        "P4": 0.42
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.902,
+        "P3": 0.704,
+        "P4": 0.727
+      },
+      "mutual_gaze": 0.0467,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1980.0,
+      "end": 1990.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.11,
+        "P3": 0.03,
+        "P4": 0.4
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.11,
+        "P3": 0.03,
+        "P4": 0.4
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.944,
+        "P3": 0.886,
+        "P4": 0.734
+      },
+      "mutual_gaze": 0.0533,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 1990.0,
+      "end": 2000.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.06,
+        "P3": 0.0,
+        "P4": 0.02
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.06,
+        "P3": 0.0,
+        "P4": 0.02
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.643,
+        "P3": 0.449,
+        "P4": 0.692
+      },
+      "mutual_gaze": 0.0133,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2000.0,
+      "end": 2010.0,
+      "attention": {
+        "P1": 0.14,
+        "P2": 0.06,
+        "P3": 0.04,
+        "P4": 0.14
+      },
+      "dominance": {
+        "P1": 0.14,
+        "P2": 0.06,
+        "P3": 0.04,
+        "P4": 0.14
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.65,
+        "P3": 0.483,
+        "P4": 0.713
+      },
+      "mutual_gaze": 0.0067,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2010.0,
+      "end": 2020.0,
+      "attention": {
+        "P1": 0.0067,
+        "P2": 0.18,
+        "P3": 0.05,
+        "P4": 0.29
+      },
+      "dominance": {
+        "P1": 0.0067,
+        "P2": 0.18,
+        "P3": 0.05,
+        "P4": 0.29
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.79,
+        "P3": 0.57,
+        "P4": 0.797
+      },
+      "mutual_gaze": 0.0467,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2020.0,
+      "end": 2030.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.41,
+        "P3": 0.24,
+        "P4": 0.16
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.41,
+        "P3": 0.24,
+        "P4": 0.16
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.664,
+        "P3": 0.732,
+        "P4": 0.979
+      },
+      "mutual_gaze": 0.0333,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2030.0,
+      "end": 2040.0,
+      "attention": {
+        "P1": 0.0133,
+        "P2": 0.69,
+        "P3": 0.11,
+        "P4": 0.38
+      },
+      "dominance": {
+        "P1": 0.0133,
+        "P2": 0.69,
+        "P3": 0.11,
+        "P4": 0.38
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.706,
+        "P3": 0.923,
+        "P4": 0.986
+      },
+      "mutual_gaze": 0.18,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2040.0,
+      "end": 2050.0,
+      "attention": {
+        "P1": 0.0667,
+        "P2": 0.32,
+        "P3": 0.29,
+        "P4": 0.09
+      },
+      "dominance": {
+        "P1": 0.0667,
+        "P2": 0.32,
+        "P3": 0.29,
+        "P4": 0.09
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.609,
+        "P3": 0.559,
+        "P4": 0.979
+      },
+      "mutual_gaze": 0.0267,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2050.0,
+      "end": 2060.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.39,
+        "P3": 0.04,
+        "P4": 0.07
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.39,
+        "P3": 0.04,
+        "P4": 0.07
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.797,
+        "P3": 0.321,
+        "P4": 0.951
+      },
+      "mutual_gaze": 0.0467,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2060.0,
+      "end": 2070.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.42,
+        "P3": 0.05,
+        "P4": 0.04
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.42,
+        "P3": 0.05,
+        "P4": 0.04
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.601,
+        "P3": 0.398,
+        "P4": 0.972
+      },
+      "mutual_gaze": 0.02,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2070.0,
+      "end": 2080.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.47,
+        "P3": 0.0,
+        "P4": 0.07
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.47,
+        "P3": 0.0,
+        "P4": 0.07
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.678,
+        "P3": 0.384,
+        "P4": 0.979
+      },
+      "mutual_gaze": 0.04,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2080.0,
+      "end": 2090.0,
+      "attention": {
+        "P1": 0.0133,
+        "P2": 0.44,
+        "P3": 0.0,
+        "P4": 0.46
+      },
+      "dominance": {
+        "P1": 0.0133,
+        "P2": 0.44,
+        "P3": 0.0,
+        "P4": 0.46
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.937,
+        "P3": 0.402,
+        "P4": 0.951
+      },
+      "mutual_gaze": 0.24,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2090.0,
+      "end": 2100.0,
+      "attention": {
+        "P1": 0.04,
+        "P2": 0.43,
+        "P3": 0.03,
+        "P4": 0.44
+      },
+      "dominance": {
+        "P1": 0.04,
+        "P2": 0.43,
+        "P3": 0.03,
+        "P4": 0.44
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.958,
+        "P3": 0.48,
+        "P4": 0.951
+      },
+      "mutual_gaze": 0.22,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2100.0,
+      "end": 2110.0,
+      "attention": {
+        "P1": 0.0267,
+        "P2": 0.33,
+        "P3": 0.02,
+        "P4": 0.28
+      },
+      "dominance": {
+        "P1": 0.0267,
+        "P2": 0.33,
+        "P3": 0.02,
+        "P4": 0.28
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.762,
+        "P3": 0.577,
+        "P4": 0.853
+      },
+      "mutual_gaze": 0.0933,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2110.0,
+      "end": 2120.0,
+      "attention": {
+        "P1": 0.036,
+        "P2": 0.5618,
+        "P3": 0.04,
+        "P4": 0.2022
+      },
+      "dominance": {
+        "P1": 0.036,
+        "P2": 0.5618,
+        "P3": 0.04,
+        "P4": 0.2022
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.804,
+        "P3": 0.5355,
+        "P4": 0.86
+      },
+      "mutual_gaze": 0.0781,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2120.0,
+      "end": 2130.0,
+      "attention": {
+        "P1": 0.0068,
+        "P2": 0.6531,
+        "P3": 0.0,
+        "P4": 0.0
+      },
+      "dominance": {
+        "P1": 0.0068,
+        "P2": 0.6531,
+        "P3": 0.0,
+        "P4": 0.0
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.65,
+        "P3": 0.632,
+        "P4": 0.916
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2130.0,
+      "end": 2140.0,
+      "attention": {
+        "P1": 0.0069,
+        "P2": 0.1158,
+        "P3": 0.0,
+        "P4": 0.0842
+      },
+      "dominance": {
+        "P1": 0.0069,
+        "P2": 0.1158,
+        "P3": 0.0,
+        "P4": 0.0842
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.685,
+        "P3": 0.4705,
+        "P4": 0.72
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2140.0,
+      "end": 2150.0,
+      "attention": {
+        "P1": 0.0267,
+        "P2": 0.17,
+        "P3": 0.08,
+        "P4": 0.39
+      },
+      "dominance": {
+        "P1": 0.0267,
+        "P2": 0.17,
+        "P3": 0.08,
+        "P4": 0.39
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.762,
+        "P3": 0.73,
+        "P4": 0.783
+      },
+      "mutual_gaze": 0.08,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2150.0,
+      "end": 2160.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.02,
+        "P3": 0.07,
+        "P4": 0.28
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.02,
+        "P3": 0.07,
+        "P4": 0.28
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.797,
+        "P3": 0.544,
+        "P4": 0.699
+      },
+      "mutual_gaze": 0.0067,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2160.0,
+      "end": 2170.0,
+      "attention": {
+        "P1": 0.1678,
+        "P2": 0.1935,
+        "P3": 0.0417,
+        "P4": 0.0206
+      },
+      "dominance": {
+        "P1": 0.1678,
+        "P2": 0.1935,
+        "P3": 0.0417,
+        "P4": 0.0206
+      },
+      "engagement": {
+        "P1": 0.25,
+        "P2": 0.622,
+        "P3": 0.4865,
+        "P4": 0.732
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2170.0,
+      "end": 2180.0,
+      "attention": {
+        "P1": 0.0743,
+        "P2": 0.0345,
+        "P3": 0.0,
+        "P4": 0.1638
+      },
+      "dominance": {
+        "P1": 0.0743,
+        "P2": 0.0345,
+        "P3": 0.0,
+        "P4": 0.1638
+      },
+      "engagement": {
+        "P1": 0.36,
+        "P2": 0.643,
+        "P3": 0.501,
+        "P4": 0.664
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2180.0,
+      "end": 2190.0,
+      "attention": {
+        "P1": 0.1074,
+        "P2": 0.0593,
+        "P3": 0.0296,
+        "P4": 0.1324
+      },
+      "dominance": {
+        "P1": 0.1074,
+        "P2": 0.0593,
+        "P3": 0.0296,
+        "P4": 0.1324
+      },
+      "engagement": {
+        "P1": 0.3385,
+        "P2": 0.594,
+        "P3": 0.427,
+        "P4": 0.7375
+      },
+      "mutual_gaze": 0.0118,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2190.0,
+      "end": 2200.0,
+      "attention": {
+        "P1": 0.0,
+        "P2": 0.0472,
+        "P3": 0.0362,
+        "P4": 0.0
+      },
+      "dominance": {
+        "P1": 0.0,
+        "P2": 0.0472,
+        "P3": 0.0362,
+        "P4": 0.0
+      },
+      "engagement": {
+        "P1": 0.28,
+        "P2": 0.48,
+        "P3": 0.471,
+        "P4": 0.699
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2200.0,
+      "end": 2210.0,
+      "attention": {
+        "P1": 0.0957,
+        "P2": 0.022,
+        "P3": 0.0083,
+        "P4": 0.0
+      },
+      "dominance": {
+        "P1": 0.0957,
+        "P2": 0.022,
+        "P3": 0.0083,
+        "P4": 0.0
+      },
+      "engagement": {
+        "P1": 0.377,
+        "P2": 0.2355,
+        "P3": 0.5065,
+        "P4": 0.6605
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2210.0,
+      "end": 2220.0,
+      "attention": {
+        "P1": 0.0833,
+        "P2": 0.0,
+        "P3": 0.0189,
+        "P4": 0.0
+      },
+      "dominance": {
+        "P1": 0.0833,
+        "P2": 0.0,
+        "P3": 0.0189,
+        "P4": 0.0
+      },
+      "engagement": {
+        "P1": 0.2605,
+        "P2": 0.25,
+        "P3": 0.316,
+        "P4": 0.58
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2220.0,
+      "end": 2230.0,
+      "attention": {
+        "P1": 0.4,
+        "P2": 0.0,
+        "P3": 0.0,
+        "P4": 0.0
+      },
+      "dominance": {
+        "P1": 0.4,
+        "P2": 0.0,
+        "P3": 0.0,
+        "P4": 0.0
+      },
+      "engagement": {
+        "P1": 0.2555,
+        "P2": 0.2725,
+        "P3": 0.22,
+        "P4": 0.267
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P3",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2230.0,
+      "end": 2240.0,
+      "attention": {
+        "P1": 0.1875,
+        "P2": 0.12,
+        "P3": 0.0,
+        "P4": 0.24
+      },
+      "dominance": {
+        "P1": 0.1875,
+        "P2": 0.12,
+        "P3": 0.0,
+        "P4": 0.24
+      },
+      "engagement": {
+        "P1": 0.317,
+        "P2": 0.25,
+        "P3": 0.303,
+        "P4": 0.25
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2240.0,
+      "end": 2250.0,
+      "attention": {
+        "P1": 0.0625,
+        "P2": 0.075,
+        "P3": 0.1,
+        "P4": 0.0175
+      },
+      "dominance": {
+        "P1": 0.0625,
+        "P2": 0.075,
+        "P3": 0.1,
+        "P4": 0.0175
+      },
+      "engagement": {
+        "P1": 0.466,
+        "P2": 0.313,
+        "P3": 0.466,
+        "P4": 0.439
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2250.0,
+      "end": 2260.0,
+      "attention": {
+        "P1": 0.2833,
+        "P2": 0.08,
+        "P3": 0.1,
+        "P4": 0.0333
+      },
+      "dominance": {
+        "P1": 0.2833,
+        "P2": 0.08,
+        "P3": 0.1,
+        "P4": 0.0333
+      },
+      "engagement": {
+        "P1": 0.49,
+        "P2": 0.3275,
+        "P3": 0.427,
+        "P4": 0.644
+      },
+      "mutual_gaze": 0.0095,
+      "addressee": {
+        "person": "P2",
+        "reason": "re-engage least engaged"
+      }
+    },
+    {
+      "start": 2260.0,
+      "end": 2268.8,
+      "attention": {
+        "P1": 0.1442,
+        "P2": 0.0,
+        "P3": 0.0693,
+        "P4": 0.2529
+      },
+      "dominance": {
+        "P1": 0.1442,
+        "P2": 0.0,
+        "P3": 0.0693,
+        "P4": 0.2529
+      },
+      "engagement": {
+        "P1": 0.367,
+        "P2": 0.5466,
+        "P3": 0.5091,
+        "P4": 0.6375
+      },
+      "mutual_gaze": 0.0,
+      "addressee": {
+        "person": "P1",
+        "reason": "re-engage least engaged"
+      }
+    }
+  ]
+}
