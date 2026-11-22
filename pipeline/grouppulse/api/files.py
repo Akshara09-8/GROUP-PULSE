@@ -59,8 +59,10 @@ class LocalFiles:
         return str(dest), size
 
     def delete(self, path: str | None) -> None:
+        """Delete a video and its overlay (per-frame face boxes are derived from it)."""
         if path:
             Path(path).unlink(missing_ok=True)
+            Path(str(path) + ".overlay.json").unlink(missing_ok=True)
 
     def exists(self, path: str | None) -> bool:
         return bool(path) and Path(path).exists()

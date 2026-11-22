@@ -24,5 +24,6 @@ class Settings:
     # free-tier guards (Supabase free: ~1 GB file storage): refuse new uploads beyond these
     max_active_uploads: int = field(default_factory=lambda: int(_env("GP_MAX_ACTIVE_UPLOADS", "50")))
     max_storage_mb: int = field(default_factory=lambda: int(_env("GP_MAX_STORAGE_MB", "900")))
+    purge_every_s: float = field(default_factory=lambda: float(_env("GP_PURGE_EVERY_S", "3600")))
     min_people: int = 2     # 3-5 is the designed range; 2 and 6 are accepted with a warning (T2.7)
     max_people: int = 6

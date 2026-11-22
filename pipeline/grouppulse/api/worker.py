@@ -7,6 +7,7 @@ queued jobs are marked failed at startup so nothing stays "processing" forever.
 
 from __future__ import annotations
 
+import json
 import logging
 import traceback
 from concurrent.futures import Future, ThreadPoolExecutor
@@ -24,13 +25,31 @@ class ProcessingUnavailable(RuntimeError):
     """The server cannot process this kind of upload (yet); shown to the user as-is."""
 
 
-def single_camera_processor(video: Path, people: int) -> dict:
-    """Placeholder until the single-camera perception path exists.
+def overlay_path(video: str | Path) -> Path:
+    """Where a session's per-frame overlay lives: beside its video, deleted with it."""
+    return Path(str(video) + ".overlay.json")
 
-    Phase 1 reads one close-up camera per person (the AMI setup). A demo upload is one camera
-    filming the whole group, which needs multi-face tracking and image-plane gaze targets."""
-    raise ProcessingUnavailable(
-        "Uploads from a single camera are not supported yet. Try one of the AMI demo sessions.")
+
+def single_camera_processor(video: Path, people: int) -> dict:
+    """Uploads: one camera filming the whole group (perception/single.py, experimental).
+
+    Returns an analyze() summary plus an "overlay" entry the worker stores beside the video."""
+    from ..perception.single import process_video
+    from ..social import analyze
+
+    rows, overlay = process_video(video, people, session=video.stem)
+    if not rows or not any(r.face_found for r in rows):
+        raise ProcessingUnavailable("No faces were found in this video. Use a fixed camera that shows "
+                                    "everyone's face, in reasonable light.")
+    summary = analyze(rows, None)
+    found = len(overlay["people"])
+    if found < people:
+        summary["warnings"].append(f"Found {found} of the {people} people you said are in view; "
+                                   "the others may be turned away or too small in the frame.")
+    summary["warnings"].append("Uploads use an experimental single-camera reader; gaze targets are "
+                               "not yet validated, so treat the scores as rough.")
+    summary["overlay"] = overlay
+    return summary
 
 
 class Worker:
@@ -45,6 +64,9 @@ class Worker:
         self.store.set_status(sid, "processing")
         try:
             summary = self.processor(video, people)
+            overlay = summary.pop("overlay", None)
+            if overlay is not None:
+                overlay_path(video).write_text(json.dumps(overlay), encoding="utf-8")
             self.store.save_summary(sid, summary)
         except ProcessingUnavailable as e:
             self.store.set_status(sid, "failed", str(e))

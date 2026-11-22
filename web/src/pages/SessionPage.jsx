@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { api, fmtTime, pct } from '../api.js'
 import { GazeNetwork, TimelineChart } from '../components/charts.jsx'
+import VideoOverlay from '../components/VideoOverlay.jsx'
 import { Empty, ErrorBox, Loading, Person, Pill, StatusPill } from '../components/ui.jsx'
 import { personColor } from '../theme.js'
 
@@ -95,6 +96,16 @@ export default function SessionPage() {
           </div>
         </div>
       </div>
+
+      {s.has_video && (
+        <section className="card">
+          <div className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
+            <h2 className="label">Video with gaze</h2>
+            <span className="text-xs text-muted">Deleted {s.expires_at ? new Date(s.expires_at).toLocaleString() : 'after 24 h'}</span>
+          </div>
+          <VideoOverlay sessionId={id} onTime={(t) => wins && setAt(Math.min(wins.length - 1, Math.floor(t / 10)))} />
+        </section>
+      )}
 
       <div className="grid gap-3 lg:grid-cols-[1.6fr_1fr]">
         <section className="card">

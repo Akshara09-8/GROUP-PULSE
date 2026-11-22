@@ -231,6 +231,15 @@ class YoloPose:
         self._model = YOLO(str(weights or fetch_yolo_pose()))
         self._conf, self._imgsz = conf, imgsz
 
+    def detect(self, frame: np.ndarray) -> list[PersonPose]:
+        """Every person in the frame, no tracking (avoids ByteTrack's extra runtime dependency)."""
+        r = self._model(frame, imgsz=self._imgsz, conf=self._conf, verbose=False)[0]
+        if r.boxes is None or not len(r.boxes) or r.keypoints is None:
+            return []
+        kps = r.keypoints.data.cpu().numpy()
+        return [PersonPose(None, tuple(float(v) for v in b), k, float(s))
+                for b, k, s in zip(r.boxes.xyxy.cpu().numpy(), kps, r.boxes.conf.cpu().numpy())]
+
     def largest(self, frame: np.ndarray) -> PersonPose | None:
         """The biggest person in the frame (the close-up's subject, not someone walking behind)."""
         r = self._model(frame, imgsz=self._imgsz, conf=self._conf, verbose=False)[0]

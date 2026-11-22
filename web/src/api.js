@@ -24,6 +24,8 @@ export const api = {
   windows: (id) => req(`/sessions/${id}/windows`),
   person: (id, label) => req(`/sessions/${id}/people/${label}`),
   remove: (id) => req(`/sessions/${id}`, { method: 'DELETE' }),
+  overlay: (id) => req(`/sessions/${id}/overlay`),
+  videoUrl: (id) => `${BASE}/sessions/${id}/video`,
   upload: ({ file, title, people, consent }) => {
     const f = new FormData()
     f.append('file', file)

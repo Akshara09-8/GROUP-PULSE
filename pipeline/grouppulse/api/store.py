@@ -185,6 +185,11 @@ class Store:
                 w["engagement"][r["label"]] = r["engagement"]
             return [out[i] for i in sorted(out)]
 
+    def video_path(self, sid: str) -> str | None:
+        with self.engine.connect() as c:
+            s = self._session_row(c, sid)
+        return s["video_path"] if s is not None else None
+
     def delete_session(self, sid: str) -> str | None:
         """Remove a session and its results; returns its video path (for the caller to delete)."""
         with self.engine.begin() as c:

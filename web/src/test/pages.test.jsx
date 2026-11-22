@@ -76,6 +76,26 @@ describe('Session analysis page', () => {
   })
 })
 
+describe('T4.2 video overlay', () => {
+  it('finds the overlay frame for a playback time', async () => {
+    const { frameAt } = await import('../components/VideoOverlay.jsx')
+    const ov = { fps: 2.5, frames: [0, 0.4, 0.8, 1.2].map((t) => ({ t, people: {} })) }
+    expect(frameAt(ov, 0).t).toBe(0)
+    expect(frameAt(ov, 0.5).t).toBe(0.4)
+    expect(frameAt(ov, 99).t).toBe(1.2)
+    expect(frameAt({ frames: [] }, 1)).toBeNull()
+  })
+  it('shows the video section only when the session has a video', async () => {
+    const withVideo = { ...session, id: 'up1', source: 'upload', has_video: true, expires_at: '2026-11-23T10:00:00+00:00' }
+    mockApi({ 'GET /sessions/up1': [200, withVideo], 'GET /sessions/up1/windows': [200, windows],
+      'GET /sessions/up1/overlay': [200, { fps: 2.5, people: ['P1'], frames: [] }] })
+    at('/sessions/up1')
+    expect(await screen.findByText('Video with gaze')).toBeInTheDocument()
+    expect(screen.getByLabelText('Meeting video')).toHaveAttribute('src', '/api/sessions/up1/video')
+    expect(await screen.findByText(/Show gaze overlay/)).toBeInTheDocument()
+  })
+})
+
 describe('Participant page', () => {
   it('shows engagement against the group and the disengaged spell', async () => {
     mockApi({ 'GET /sessions/es2002a/people/P4': [200, { label: 'P4', ...session.per_person.P4, group_mean_engagement: 0.75,
