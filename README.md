@@ -2,6 +2,8 @@
 
 Detect the dominant speaker, low rapport or a disengaged member of a small group (3–5 people) from **gaze and body orientation alone**, and show it in a free web demo.
 
+**Live demo (AMI meetings, no upload needed):** https://akshara09-8.github.io/GROUP-PULSE/
+
 Planning doc: phases, test cases, tech stack and database options live in the *Group Pulse — Development Plan* doc. UI colour schemes: `design/group-pulse-ui-schemes.html` (also in Figma: *Group Pulse — UI Colour Schemes*).
 
 ## Status
