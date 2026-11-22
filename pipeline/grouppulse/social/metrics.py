@@ -291,16 +291,44 @@ def addressee(dom: dict[str, float], eng: dict[str, float], cfg: SocialConfig) -
     return {"person": max(dom, key=dom.get), "reason": "address dominant"}
 
 
+def adjusted_attention(s: Series, layout: SeatLayout, confusion: dict) -> dict[str, float]:
+    """attention_received with each viewer's camera-specific gaze confusion undone (quantify.py).
+
+    Same definition as attention_received (share of the others' known-target frames that land on j),
+    but each viewer's target mix is first corrected from predicted to estimated-true."""
+    from ..perception.quantify import adjusted_shares
+
+    mass, total = defaultdict(float), defaultdict(float)
+    for i in s.people:
+        known = [x for x in s.target[i] if _known(x)]
+        view = layout.camera_of.get(i)
+        if not known or view not in confusion:
+            shares = {k: v for k, v in gaze_shares(s)[i].items()}
+        else:
+            shares = adjusted_shares(known, confusion[view])
+        for j in s.people:
+            if j != i:
+                mass[j] += len(known) * shares.get(j, 0.0)
+                total[j] += len(known)
+    return {j: (mass[j] / total[j] if total[j] else 0.0) for j in s.people}
+
+
 def analyze(rows: Iterable[TrackRow], layout: SeatLayout | None = None,
-            cfg: SocialConfig | None = None) -> dict:
-    """Session summary: per-person and group scores, windows timeline, spells, warnings."""
+            cfg: SocialConfig | None = None, confusion: dict | None = None) -> dict:
+    """Session summary: per-person and group scores, windows timeline, spells, warnings.
+
+    With `confusion` (per-camera matrices from the calibrated gaze model) and a layout, session-level
+    attention received and dominance use adjusted counting; 10 s windows keep raw counts because a
+    window holds too few frames to correct reliably."""
     cfg = cfg or SocialConfig()
     s = Series.from_rows(rows)
     warnings = []
     if not 3 <= len(s.people) <= 5:
         warnings.append(f"Group Pulse is designed for 3-5 people; this session has {len(s.people)}.")  # T2.7
     eng = engagement(s, cfg)
-    att = attention_received(s)
+    raw_att = attention_received(s)
+    use_adjusted = bool(confusion) and layout is not None
+    att = adjusted_attention(s, layout, confusion) if use_adjusted else raw_att
     face = facing_received(s, layout, cfg)
     dom = dominance(att, face, cfg)
     mutual = mutual_gaze_rate(s)
@@ -345,6 +373,8 @@ def analyze(rows: Iterable[TrackRow], layout: SeatLayout | None = None,
             "gaze_following_rate": round(following, 4),
             "facing_mean": round(facing_mean, 4),
             "rapport_index": rapport(mutual, following, facing_mean, cfg),
+            "attention_method": "adjusted" if use_adjusted else "raw",
+            "attention_raw": {p: round(v, 4) for p, v in raw_att.items()},
         },
         "disengaged_spells": spells,
         "windows": windows,

@@ -21,7 +21,7 @@ from ..data.annotations import find_ann_root
 from ..data.config import load_config
 from ..data.splits import series_of
 from ..perception.calibrate import labelled_rows, to_samples
-from ..perception.crossval import relabel
+from ..perception.crossval import nested_confusion, relabel
 from ..perception.io import read_tracks
 from ..perception.layout import layout_for_meeting
 from ..perception.metrics import target_accuracy
@@ -45,12 +45,18 @@ def _ci(items, stat):
 
 # ------------------------------------------------------------------ E1
 
-def gaze_idiap(data: Path, tracks: Path, meetings: list[str]) -> tuple[list[dict], dict[str, list]]:
-    """Per-meeting held-out gaze accuracy, plus the relabelled rows for later experiments."""
+def gaze_idiap(data: Path, tracks: Path, meetings: list[str]) -> tuple[list[dict], dict[str, list], dict[str, dict]]:
+    """Per-meeting held-out gaze accuracy, the relabelled rows, and per-meeting confusion matrices
+    (measured only on the other series, for adjusted counting)."""
     labelled = {m: labelled_rows(data, m, tracks) for m in meetings}
     site = layout_for_meeting(meetings[0]).name
-    out, relabelled = [], {}
+    out, relabelled, confusions = [], {}, {}
+    cache: dict[str, dict] = {}
     for held in meetings:
+        s = series_of(held)
+        if s not in cache:
+            cache[s] = nested_confusion(labelled, tracks, {s}, FEATS, site)
+        confusions[held] = cache[s]
         train = [p for m, rs in labelled.items() if series_of(m) != series_of(held) for p in rs]
         model = fit(to_samples(train, layout_for_meeting(held), FEATS), site, features=FEATS)
         rows = relabel(read_tracks(tracks / f"{held}.csv"), model)
@@ -62,7 +68,7 @@ def gaze_idiap(data: Path, tracks: Path, meetings: list[str]) -> tuple[list[dict
         out.append({"meeting": held, "accuracy": target_accuracy(truth, guess),
                     "majority_baseline": target_accuracy(truth, [majority] * len(truth)),
                     "labelled_frames": len(truth), "train_frames": len(train)})
-    return out, relabelled
+    return out, relabelled, confusions
 
 
 def gaze_edinburgh(data: Path, tracks: Path, meeting: str = "ES2008a") -> list[dict]:
@@ -98,6 +104,9 @@ def dominance(meetings: dict[str, dict], truths: dict[str, list[str]], cfg: Soci
             if src.get(key):
                 rank = analyze(src[key], layout_for_meeting(m), gaze)["group"]["dominance_rank"]
                 row[f"gaze_{key}"] = rank_score(rank, truths[m])
+        if src.get("pred") and src.get("confusion"):
+            rank = analyze(src["pred"], layout_for_meeting(m), gaze, src["confusion"])["group"]["dominance_rank"]
+            row["gaze_pred_adjusted"] = rank_score(rank, truths[m])
         out.append(row)
     return out
 
@@ -173,9 +182,9 @@ def run(data: Path, idiap_tracks: Path | None, edinburgh_tracks: Path | None) ->
                               "window_s": social.window_s, "coverage_for_E4": COVERAGE}}
 
     idiap = [m for m in cfg_all.meetings("focus") if m.startswith("IS") and idiap_tracks and (idiap_tracks / f"{m}.csv").exists()]
-    relabelled = {}
+    relabelled, confusions = {}, {}
     if len(idiap) >= 3:
-        e1, relabelled = gaze_idiap(data, idiap_tracks, idiap)
+        e1, relabelled, confusions = gaze_idiap(data, idiap_tracks, idiap)
         res["E1_gaze_idiap"] = {"per_meeting": [{k: _r(v) if isinstance(v, float) else v for k, v in x.items()} for x in e1],
                                 "mean_accuracy": _ci([x["accuracy"] for x in e1], mean),
                                 "mean_majority_baseline": _ci([x["majority_baseline"] for x in e1], mean),
@@ -191,7 +200,8 @@ def run(data: Path, idiap_tracks: Path | None, edinburgh_tracks: Path | None) ->
         for m in group:
             if site == "idiap":
                 orig = read_tracks(idiap_tracks / f"{m}.csv")
-                meetings[m] = {"pred": relabelled.get(m), "true": with_true_gaze(orig, ann, m)}
+                meetings[m] = {"pred": relabelled.get(m), "true": with_true_gaze(orig, ann, m),
+                               "confusion": confusions.get(m)}
             elif edinburgh_tracks and (edinburgh_tracks / f"{m}.csv").exists():
                 rows = read_tracks(edinburgh_tracks / f"{m}.csv")
                 # ES2008a trained the Edinburgh gaze model: its predicted gaze is in-sample, so true gaze only
@@ -202,7 +212,7 @@ def run(data: Path, idiap_tracks: Path | None, edinburgh_tracks: Path | None) ->
         truths = {m: talk_rank(ann, m) for m in meetings}
         e2 = dominance(meetings, truths, social)
         summary = {}
-        for key in ("gaze_pred", "gaze_true", "seat_baseline"):
+        for key in ("gaze_pred", "gaze_pred_adjusted", "gaze_true", "seat_baseline"):
             items = [x[key] for x in e2 if key in x]
             if items:
                 summary[key] = {"top1": _ci([float(i["top1"]) for i in items], mean),

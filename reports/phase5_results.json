@@ -311,6 +311,16 @@
           "rho": 1.0,
           "top1": true
         },
+        "gaze_pred_adjusted": {
+          "order": [
+            "P3",
+            "P2",
+            "P4",
+            "P1"
+          ],
+          "rho": 0.8,
+          "top1": false
+        },
         "gaze_true": {
           "order": [
             "P2",
@@ -349,6 +359,16 @@
           ],
           "rho": 0.8,
           "top1": false
+        },
+        "gaze_pred_adjusted": {
+          "order": [
+            "P1",
+            "P3",
+            "P4",
+            "P2"
+          ],
+          "rho": 0.4,
+          "top1": true
         },
         "gaze_true": {
           "order": [
@@ -389,6 +409,16 @@
           "rho": -0.4,
           "top1": false
         },
+        "gaze_pred_adjusted": {
+          "order": [
+            "P3",
+            "P1",
+            "P4",
+            "P2"
+          ],
+          "rho": -0.4,
+          "top1": false
+        },
         "gaze_true": {
           "order": [
             "P1",
@@ -419,6 +449,16 @@
       },
       {
         "gaze_pred": {
+          "order": [
+            "P3",
+            "P2",
+            "P1",
+            "P4"
+          ],
+          "rho": 0.4,
+          "top1": false
+        },
+        "gaze_pred_adjusted": {
           "order": [
             "P3",
             "P2",
@@ -467,6 +507,16 @@
           "rho": -0.2,
           "top1": false
         },
+        "gaze_pred_adjusted": {
+          "order": [
+            "P1",
+            "P4",
+            "P2",
+            "P3"
+          ],
+          "rho": 0.4,
+          "top1": true
+        },
         "gaze_true": {
           "order": [
             "P2",
@@ -506,6 +556,16 @@
           "rho": 0.2,
           "top1": false
         },
+        "gaze_pred_adjusted": {
+          "order": [
+            "P1",
+            "P3",
+            "P4",
+            "P2"
+          ],
+          "rho": 0.4,
+          "top1": true
+        },
         "gaze_true": {
           "order": [
             "P1",
@@ -536,6 +596,16 @@
       },
       {
         "gaze_pred": {
+          "order": [
+            "P2",
+            "P4",
+            "P1",
+            "P3"
+          ],
+          "rho": 0.0,
+          "top1": false
+        },
+        "gaze_pred_adjusted": {
           "order": [
             "P2",
             "P4",
@@ -584,6 +654,16 @@
           "rho": -0.4,
           "top1": false
         },
+        "gaze_pred_adjusted": {
+          "order": [
+            "P2",
+            "P1",
+            "P4",
+            "P3"
+          ],
+          "rho": -0.4,
+          "top1": false
+        },
         "gaze_true": {
           "order": [
             "P4",
@@ -621,6 +701,16 @@
             "P2"
           ],
           "rho": 1.0,
+          "top1": true
+        },
+        "gaze_pred_adjusted": {
+          "order": [
+            "P1",
+            "P4",
+            "P3",
+            "P2"
+          ],
+          "rho": 0.8,
           "top1": true
         },
         "gaze_true": {
@@ -662,6 +752,16 @@
           "rho": 0.0,
           "top1": false
         },
+        "gaze_pred_adjusted": {
+          "order": [
+            "P4",
+            "P1",
+            "P2",
+            "P3"
+          ],
+          "rho": -0.2,
+          "top1": false
+        },
         "gaze_true": {
           "order": [
             "P2",
@@ -700,6 +800,16 @@
           ],
           "rho": -0.4,
           "top1": false
+        },
+        "gaze_pred_adjusted": {
+          "order": [
+            "P1",
+            "P2",
+            "P4",
+            "P3"
+          ],
+          "rho": 0.2,
+          "top1": true
         },
         "gaze_true": {
           "order": [
@@ -747,6 +857,24 @@
           ],
           "n": 11,
           "value": 0.1818
+        }
+      },
+      "gaze_pred_adjusted": {
+        "mean_rank_corr": {
+          "ci95": [
+            -0.0182,
+            0.4545
+          ],
+          "n": 11,
+          "value": 0.2182
+        },
+        "top1": {
+          "ci95": [
+            0.1818,
+            0.7273
+          ],
+          "n": 11,
+          "value": 0.4545
         }
       },
       "gaze_true": {

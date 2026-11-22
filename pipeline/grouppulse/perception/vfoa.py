@@ -80,6 +80,9 @@ class VfoaModel:
     # yaw/pitch-only model fitted on ALL rows, used when a row lacks the extra features
     # (e.g. MediaPipe could not read a profile face, so there is no eye direction)
     fallback: dict[str, dict[str, TargetModel]] = field(default_factory=dict)
+    # per-camera confusion C[true, predicted] measured on held-out training meetings (quantify.py);
+    # used to correct attention shares, never per-frame labels
+    confusion: dict = field(default_factory=dict)
 
     def scores(self, view: str, yaw: float | None, pitch: float | None,
                extra: tuple[float, ...] = ()) -> dict[str, float]:
@@ -119,6 +122,13 @@ class VfoaModel:
                 for tgt, m in sorted(models.items()):
                     lines += [f'[{table}.{view}."{tgt}"]', f"prior = {m.prior:.5f}", f"mean = {fmt(m.mean)}",
                               "cov = [" + ", ".join(fmt(r) for r in m.cov) + "]", ""]
+        if self.confusion:
+            from .quantify import TARGETS
+            lines += ["# Rows = true target, columns = predicted, in this order:",
+                      "[confusion]", "targets = [" + ", ".join(f'"{t}"' for t in TARGETS) + "]", "", "[confusion.matrices]"]
+            for view, c in sorted(self.confusion.items()):
+                lines.append(f"{view} = [" + ", ".join(fmt(r) for r in np.asarray(c)) + "]")
+            lines.append("")
         p.write_text("\n".join(lines), encoding="utf-8")
         return p
 
@@ -128,7 +138,9 @@ class VfoaModel:
             raw = tomllib.load(f)
         read = lambda t: {v: {k: TargetModel(m["mean"], m["cov"], m["prior"]) for k, m in tg.items()}  # noqa: E731
                           for v, tg in raw.get(t, {}).items()}
-        return cls(raw["site"], read("cameras"), tuple(raw.get("features", FEATURES[:2])), read("fallback"))
+        from .quantify import from_jsonable
+        return cls(raw["site"], read("cameras"), tuple(raw.get("features", FEATURES[:2])), read("fallback"),
+                   from_jsonable(raw.get("confusion")))
 
 
 def default_path(site: str) -> Path:

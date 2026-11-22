@@ -19,6 +19,7 @@ from pathlib import Path
 
 from ..data.annotations import find_ann_root, load_focus, load_speakers, seat_of_speaker
 from ..data.config import REPO_ROOT
+from ..data.splits import series_of
 from .evaluate import truth_at
 from .gaze import gaze_target
 from .io import TrackRow, read_tracks
@@ -161,7 +162,13 @@ def main(argv: list[str] | None = None) -> int:
     if not args.no_save:
         all_rows = [p for rs in per_meeting.values() for p in rs]
         feats = FEATURE_SETS[args.features]
-        path = fit(to_samples(all_rows, layout, feats), site, features=feats).save(default_path(site))
+        model = fit(to_samples(all_rows, layout, feats), site, features=feats)
+        if len({series_of(m) for m in per_meeting}) >= 2:
+            # needs >= 2 meeting series so each can be predicted by a model that never saw its people
+            from .crossval import nested_confusion
+            model.confusion = nested_confusion(per_meeting, args.tracks, features=feats, site=site)
+            print(f"confusion matrices for {len(model.confusion)} cameras (adjusted counting enabled)")
+        path = model.save(default_path(site))
         print(f"saved {path}")
     return 0
 

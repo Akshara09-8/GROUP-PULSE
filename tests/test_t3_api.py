@@ -93,7 +93,8 @@ def test_t33_results_read_back_exactly(tmp_path):
         s = wait_status(c, sid, "done")
         want = summary(3)
         assert s["per_person"] == want["per_person"]
-        assert s["group"] == {k: v for k, v in want["group"].items()}
+        stored = {k: v for k, v in want["group"].items() if k not in ("attention_method", "attention_raw")}
+        assert s["group"] == stored                      # diagnostics are not persisted
         assert c.get(f"/sessions/{sid}/windows").json() == want["windows"]
         p = c.get(f"/sessions/{sid}/people/P2").json()
         assert p["dominance"] == want["per_person"]["P2"]["dominance"]

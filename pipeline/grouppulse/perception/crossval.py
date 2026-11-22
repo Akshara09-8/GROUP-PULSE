@@ -36,6 +36,27 @@ def relabel(rows: list[TrackRow], model: VfoaModel, smooth_window: int = 5) -> l
     return out
 
 
+def nested_confusion(labelled: dict[str, list], tracks: Path, exclude_series: set[str] | frozenset = frozenset(),
+                     features=FEATURE_SETS["eyes"], site: str = "idiap") -> dict:
+    """Per-camera confusion matrices measured honestly: each training series is predicted by a model
+    fitted on the *other* training series, so C reflects errors on unseen people. Series in
+    `exclude_series` (the meeting under test) are never used. See quantify.py."""
+    from .quantify import confusion_matrices
+
+    series = sorted({series_of(m) for m in labelled} - set(exclude_series))
+    triples = []
+    for s in series:
+        train = [p for m, rs in labelled.items() if series_of(m) not in set(exclude_series) | {s} for p in rs]
+        if not train:
+            continue
+        layout = layout_for_meeting(next(iter(labelled)))
+        model = fit(to_samples(train, layout, features), site, features=features)
+        for m in (m for m in labelled if series_of(m) == s):
+            pred = {(r.frame, r.person): r.gaze_target for r in relabel(read_tracks(tracks / f"{m}.csv"), model)}
+            triples += [(layout.camera_of[r.person], t, pred[(r.frame, r.person)]) for r, t in labelled[m]]
+    return confusion_matrices(triples)
+
+
 def main(argv: list[str] | None = None) -> int:
     cfg = load_config()
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)

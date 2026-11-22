@@ -41,21 +41,26 @@ def build(res: dict, repro: bool | None = None) -> str:
         s = d["summary"]
         L += [f"## E2 Dominance vs speaking time, {site.title()} (T5.1)", "",
               "| Method | Top-1 (most talkative found) | Mean rank correlation |", "| --- | --- | --- |"]
-        names = {"gaze_pred": "Attention received, predicted gaze", "gaze_true": "Attention received, AMI true gaze (upper bound)",
+        names = {"gaze_pred": "Attention received, predicted gaze (raw counts)",
+                 "gaze_pred_adjusted": "Attention received, predicted gaze, adjusted counting",
+                 "gaze_true": "Attention received, AMI true gaze (upper bound)",
                  "seat_baseline": "Seat baseline (seat's talkativeness in other meetings)"}
         for k, name in names.items():
             if k in s:
                 L.append(f"| {name} | {_ci(s[k]['top1'])} | {_ci(s[k]['mean_rank_corr'], pct=False)} |")
         L += [f"| Random | {_pct(s['random']['top1'])} | +0.00 |", ""]
-        L += ["| Meeting | Most talkative | Predicted gaze | True gaze | Seat baseline |", "| --- | --- | --- | --- | --- |"]
+        L += ["| Meeting | Most talkative | Predicted gaze (raw) | Predicted, adjusted | True gaze | Seat baseline |",
+              "| --- | --- | --- | --- | --- | --- |"]
         for x in d["per_meeting"]:
             cell = lambda k: (f"{x[k]['order'][0]} {'hit' if x[k]['top1'] else 'miss'}, ρ {x[k]['rho']:+.2f}") if k in x else "–"  # noqa: E731
-            L.append(f"| {x['meeting']} | {x['truth'][0]} | {cell('gaze_pred')} | {cell('gaze_true')} | {cell('seat_baseline')} |")
+            L.append(f"| {x['meeting']} | {x['truth'][0]} | {cell('gaze_pred')} | {cell('gaze_pred_adjusted')} | "
+                     f"{cell('gaze_true')} | {cell('seat_baseline')} |")
         L.append("")
-        if "gaze_pred" in s:
-            beat = s["gaze_pred"]["mean_rank_corr"]["value"] > s["seat_baseline"]["mean_rank_corr"]["value"]
-            verdicts.append((f"T5.1 dominance beats seat baseline ({site})", beat,
-                             f"ρ {s['gaze_pred']['mean_rank_corr']['value']:+.2f} vs {s['seat_baseline']['mean_rank_corr']['value']:+.2f}"))
+        best = "gaze_pred_adjusted" if "gaze_pred_adjusted" in s else "gaze_pred"
+        if best in s:
+            ours, seat = s[best]["mean_rank_corr"]["value"], s["seat_baseline"]["mean_rank_corr"]["value"]
+            verdicts.append((f"T5.1 dominance beats seat baseline ({site})", ours > seat + 1e-9,
+                             f"ρ {ours:+.2f} vs {seat:+.2f}{' (adjusted counting)' if best.endswith('adjusted') else ''}"))
 
     a = res.get("E3_ablation_edinburgh")
     if a:

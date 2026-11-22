@@ -29,6 +29,15 @@ from ..perception.layout import layout_for_meeting
 from .metrics import SocialConfig, analyze, load_social_config
 
 
+def site_confusion(layout) -> dict:
+    """Confusion matrices saved with the room's calibrated gaze model, if any (enables adjusted counting)."""
+    from ..perception.vfoa import VfoaModel, default_path
+
+    if layout is None or not default_path(layout.name).exists():
+        return {}
+    return VfoaModel.load(default_path(layout.name)).confusion
+
+
 def spearman(a: list[str], b: list[str]) -> float:
     """Rank correlation of two orderings of the same items (no ties)."""
     n = len(a)
@@ -124,7 +133,8 @@ def main(argv: list[str] | None = None) -> int:
         ap.error("give --tracks or --evaluate")
     rows = read_tracks(args.tracks)
     meeting = rows[0].meeting if rows else ""
-    summ = analyze(rows, layout_for_meeting(meeting) if meeting else None, cfg)
+    layout = layout_for_meeting(meeting) if meeting else None
+    summ = analyze(rows, layout, cfg, site_confusion(layout))
     summ = {"session": meeting, **summ}
     text = json.dumps(summ, indent=2)
     if args.out:

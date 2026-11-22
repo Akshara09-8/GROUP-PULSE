@@ -161,7 +161,7 @@ One command runs every experiment and writes [`reports/phase5_report.md`](report
 | Test | Result | Verdict |
 | --- | --- | --- |
 | T1.5 gaze target ≥ 70% | 59.5% [54.0, 65.4] held out by meeting series; baseline 28.7% | Fail |
-| T5.1 dominance vs seat baseline | Idiap ρ +0.18 vs +0.44; Edinburgh −0.20 vs +0.35 | Fail |
+| T5.1 dominance vs seat baseline | Idiap ρ +0.22 (adjusted counting; raw +0.18) vs +0.44; Edinburgh −0.20 vs +0.35 | Fail |
 | T5.2 disengagement F1 ≥ 0.6 | 11.1% [3.9, 18.1] against a gaze-label proxy | Fail |
 | T5.3 ablation gaze / orientation / both | Table produced (Edinburgh) | Pass |
 | T5.4 reproducible | Byte-identical JSON across two runs | Pass |
@@ -171,7 +171,8 @@ What the numbers say:
 
 - **The hypothesis holds on true gaze.** With AMI's labelled gaze, attention received ranks speakers at ρ +0.60 [+0.31, +0.85] on Idiap and +1.00 on ES2008a.
 - **Engagement over time is tracked.** Window engagement from predicted gaze correlates +0.62 [+0.53, +0.69] with the true-gaze version, even though rare 30 s spells are mostly missed.
-- **The gaze reader is the bottleneck.** About 60% gaze accuracy is not enough to rank people: the model over-predicts "P2" as the target (most looked-at in 7 of 11 Idiap meetings and all 3 unseen Edinburgh meetings). That systematic bias is the first thing to fix.
+- **The gaze reader is the bottleneck.** About 60% gaze accuracy is not enough to rank people: the model over-predicts "P2" as the target (most looked-at in 7 of 11 Idiap meetings and all 3 unseen Edinburgh meetings).
+- **Where "P2" comes from, and the fix (22 Nov 2026).** Measured confusion matrices show two camera-specific errors in the Idiap room: glances at the *whiteboard* are read as P2 (64% from Close-up 1, 53% from Close-up 3), and glances at P4 are read as P2 (39% from Close-up 3). P2's attention received was over-estimated in 9 of 11 held-out meetings. Session-level attention now uses **adjusted counting** (`perception/quantify.py`): each camera's confusion is measured on held-out training series and undone when counting. Top-1 rose from 2/11 to 5/11, rank correlation only from +0.18 to +0.22, still below the seat baseline. (A prototype showed +0.44, but that came from a non-standard solver and did not hold up.) Flat class priors (+0.22) and per-meeting EM prior adaptation (accuracy fell ~10 points) were also tried and not adopted.
 - **Seating predicts talking.** The project manager tends to take the same seat, so a seat baseline is strong (Idiap top-1 73%). Any future claim has to beat it.
 
 ## Data credit and licence
